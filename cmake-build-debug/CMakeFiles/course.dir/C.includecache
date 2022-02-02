@@ -6,43 +6,17 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Fr/CLionProjects/course/libs/algorithms/array/array.h
-stddef.h
--
-
-C:/Users/Fr/CLionProjects/course/libs/data_structures/ordered_array_set/ordered_array_set.h
-stdint.h
--
-assert.h
--
-memory.h
--
+C:/Users/Fr/CLionProjects/course/libs/data_structures/vector/vector.h
 stdio.h
 -
-stdbool.h
+malloc.h
 -
-../../algorithms/array/array.h
-C:/Users/Fr/CLionProjects/course/libs/algorithms/array/array.h
-
-C:/Users/Fr/CLionProjects/course/libs/data_structures/unordered_array_set/unordered_array_set.h
-stdint.h
--
-assert.h
--
-memory.h
--
-stdio.h
--
-stdbool.h
--
-../../algorithms/array/array.h
-C:/Users/Fr/CLionProjects/course/libs/algorithms/array/array.h
 
 C:/Users/Fr/CLionProjects/course/main.c
 stdio.h
 -
-libs/data_structures/unordered_array_set/unordered_array_set.h
-C:/Users/Fr/CLionProjects/course/libs/data_structures/unordered_array_set/unordered_array_set.h
-libs/data_structures/ordered_array_set/ordered_array_set.h
-C:/Users/Fr/CLionProjects/course/libs/data_structures/ordered_array_set/ordered_array_set.h
+stdint.h
+-
+libs/data_structures/vector/vector.h
+C:/Users/Fr/CLionProjects/course/libs/data_structures/vector/vector.h
 
