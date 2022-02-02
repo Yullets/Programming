@@ -11,11 +11,15 @@ stdio.h
 -
 malloc.h
 -
+stdbool.h
+-
 
 C:/Users/Fr/CLionProjects/course/main.c
 stdio.h
 -
 stdint.h
+-
+assert.h
 -
 libs/data_structures/vector/vector.h
 C:/Users/Fr/CLionProjects/course/libs/data_structures/vector/vector.h
