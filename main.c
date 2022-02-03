@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include <assert.h>
 #include "libs/data_structures/vector/vector.h"
+#include "libs/data_structures/vector/vectorVoid.h"
 
 void test_pushBack_emptyVector() {
     vector v = createVector(0);
@@ -95,6 +96,9 @@ void test() {
 
 int main() {
     //vector v = createVector ( SIZE_MAX );
-    test();
+    //test();
+    vectorVoid v;
+
+
     return 0;
 }

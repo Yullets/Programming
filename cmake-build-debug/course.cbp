@@ -179,6 +179,15 @@
 		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/data_structures/vector/vector.c">
 			<Option target="data_structures"/>
 		</Unit>
+		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/data_structures/vector/vector.h">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/data_structures/vector/vectorVoid.c">
+			<Option target="data_structures"/>
+		</Unit>
+		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/data_structures/vector/vectorVoid.h">
+			<Option target="data_structures"/>
+		</Unit>
 		<Unit filename="C:/Users/Fr/CLionProjects/course/main.c">
 			<Option target="course"/>
 		</Unit>
