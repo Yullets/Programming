@@ -24,17 +24,18 @@ vector createVector(size_t n) {
 }
 
 void reserve(vector *v, size_t newCapacity) {
-    v->data = (int *) realloc(v->capacity, newCapacity * sizeof(int));
+    v->data = (int *) realloc(v->data, newCapacity * sizeof(int));
     v->capacity = newCapacity;
+    if (newCapacity < v->size)
+        v->size = newCapacity;
+
+    if (newCapacity == 0)
+        return;
+
     if (v->data == NULL) {
         fprintf(stderr, " bad alloc ");
         exit(1);
     }
-
-    if (newCapacity == 0)
-        v->data = NULL;
-    else if (newCapacity < v->size)
-        v->size = newCapacity;
 }
 
 void clear(vector *v) {
