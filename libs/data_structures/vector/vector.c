@@ -71,10 +71,25 @@ void pushBack(vector *v, int x) {
     v->size++;
 }
 
-void popBack(vector *v){
-    if(isEmpty(v)){
+void popBack(vector *v) {
+    if (isEmpty(v)) {
         fprintf(stderr, " vector is empty ");
         exit(1);
-    }else
+    } else
         v->size--;
+}
+
+int* atVector(vector *v, size_t index){
+    if(index >= v->size)
+        fprintf(stderr, "IndexError: a[%zu] is not exists", index);
+
+    return (int*) &v->data + index;
+}
+
+int* back(vector *v) {
+    return atVector(v, v->size - 1);
+}
+
+int* front(vector *v){
+    return atVector(v, 0);
 }
