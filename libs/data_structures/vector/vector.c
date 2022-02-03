@@ -62,10 +62,10 @@ int getVectorValue(vector *v, size_t i) {
 }
 
 void pushBack(vector *v, int x) {
-    if (isFull(v))
-        reserve(v, 2 * v->capacity);
-    else if (isEmpty(v) && isFull(v))
+    if (isEmpty(v) && isFull(v))
         reserve(v, 1);
+    else if (isFull(v))
+        reserve(v, 2 * v->capacity);
 
     v->data[v->size] = x;
     v->size++;
