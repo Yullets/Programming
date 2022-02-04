@@ -84,7 +84,7 @@ int* atVector(vector *v, size_t index){
     if(index >= v->size)
         fprintf(stderr, "IndexError: a[%zu] is not exists", index);
 
-    return (int*) &v->data + index;
+    return v->data + index;
 }
 
 int* back(vector *v) {
