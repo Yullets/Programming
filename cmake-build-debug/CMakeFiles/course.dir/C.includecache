@@ -14,6 +14,12 @@ malloc.h
 stdbool.h
 -
 
+C:/Users/Fr/CLionProjects/course/libs/data_structures/vector/vectorVoid.h
+stdio.h
+-
+limits.h
+-
+
 C:/Users/Fr/CLionProjects/course/main.c
 stdio.h
 -
@@ -23,4 +29,6 @@ assert.h
 -
 libs/data_structures/vector/vector.h
 C:/Users/Fr/CLionProjects/course/libs/data_structures/vector/vector.h
+libs/data_structures/vector/vectorVoid.h
+C:/Users/Fr/CLionProjects/course/libs/data_structures/vector/vectorVoid.h
 

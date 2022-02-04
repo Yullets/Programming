@@ -34,4 +34,24 @@ void clearV(vectorVoid *v);
 //освобождает память, выделенную вектору.
 void deleteVectorV(vectorVoid *v);
 
+//возвращает значение 'истина', если вектор пустой, иначе - ложь.
+bool isEmptyV(vectorVoid *v);
+
+//возвращает значение 'истина', если вектор полный, иначе - ложь.
+bool isFullV(vectorVoid *v);
+
+//записывает по адресу destination index-ый элемент вектора v.
+void getVectorValueV(vectorVoid *v, size_t index, void *destination);
+
+//записывает на index-ый элемент вектора v значение, расположенное по
+//адресу source.
+void setVectorValueV(vectorVoid *v, size_t index, void *source);
+
+//удаляет последний элемент из вектора.
+void popBackV(vectorVoid *v);
+
+//добавляет элемент x в конец вектора v. Если вектор заполнен, увеличьте количество выделенной ему памяти в
+//2 раза, используя reserve.
+void pushBackV(vectorVoid *v, void *source);
+
 #endif //COURSE_VECTORVOID_H

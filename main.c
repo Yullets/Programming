@@ -28,7 +28,7 @@ void test_popBack_notEmptyVector() {
     assert (v.capacity == 1);
 }
 
-void test_atVector_notEmptyVector1(){
+void test_atVector_notEmptyVector1() {
     vector v = createVector(4);
 
     pushBack(&v, 1);
@@ -39,7 +39,7 @@ void test_atVector_notEmptyVector1(){
     assert(v.data + 3 == atVector(&v, 3));
 }
 
-void test_atVector_notEmptyVector2(){
+void test_atVector_notEmptyVector2() {
     vector v = createVector(2);
 
     pushBack(&v, 9);
@@ -48,7 +48,7 @@ void test_atVector_notEmptyVector2(){
     assert(v.data + 1 == atVector(&v, 1));
 }
 
-void test_atVector_requestToLastElement1(){
+void test_atVector_requestToLastElement1() {
     vector v = createVector(3);
 
     pushBack(&v, 3);
@@ -58,7 +58,7 @@ void test_atVector_requestToLastElement1(){
     assert(v.data + 2 == back(&v));
 }
 
-void test_atVector_requestToLastElement2(){
+void test_atVector_requestToLastElement2() {
     vector v = createVector(1);
 
     pushBack(&v, 1);
@@ -66,7 +66,7 @@ void test_atVector_requestToLastElement2(){
     assert(v.data == back(&v));
 }
 
-void test_back_oneElementInVector(){
+void test_back_oneElementInVector() {
     vector v = createVector(1);
 
     pushBack(&v, 7);
@@ -74,7 +74,7 @@ void test_back_oneElementInVector(){
     assert(v.data == back(&v));
 }
 
-void test_front_oneElementInVector(){
+void test_front_oneElementInVector() {
     vector v = createVector(1);
 
     pushBack(&v, 2);
@@ -97,8 +97,25 @@ void test() {
 int main() {
     //vector v = createVector ( SIZE_MAX );
     //test();
-    vectorVoid v;
+    //vectorVoid v;
 
+    size_t n;
+    scanf("%zd", &n);
+
+    vectorVoid v = createVectorV(0, sizeof(float));
+    for (int i = 0; i < n; i++) {
+        float x;
+        scanf("%f", &x);
+
+        pushBackV(&v, &x);
+    }
+
+    for (int i = 0; i < n; i++) {
+        float x;
+        getVectorValueV(&v, i, &x);
+
+        printf("%f ", x);
+    }
 
     return 0;
 }
