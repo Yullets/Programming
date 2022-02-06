@@ -9,4 +9,7 @@
 // возвращает максимальное значение целочисленных переменных a и b
 int min2(long long a, long long b);
 
+//обменивает значения по адресам a и b.
+void swap(void *a, void *b, size_t size);
+
 #endif //COURSE_ALGORITHM_H

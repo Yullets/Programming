@@ -65,4 +65,7 @@ bool isEMatrix(matrix m);
 //матрица m является симметричной, ложь – в противном случае.
 bool isSymmetricMatrix(matrix m);
 
+//транспонирует квадратную матрицу m.
+void transposeSquareMatrix(matrix m);
+
 #endif //COURSE_MATRIX_H

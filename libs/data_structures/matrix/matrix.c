@@ -5,8 +5,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <malloc.h>
-#include <stdlib.h>
-#include <assert.h>
+#include "../../algorithms/algorithm.h"
 #include "matrix.h"
 
 matrix getMemMatrix(int nRows, int nCols) {
@@ -64,15 +63,9 @@ void swapRows(matrix m, int i1, int i2) {
     m.values[i2] = t;
 }
 
-void swap(int *a, int *b) {
-    int t = *a;
-    *a = *b;
-    *b = t;
-}
-
 void swapColumns(matrix m, int j1, int j2) {
     for (int i = 0; i < m.nRows; i++)
-        swap(&m.values[i][j1], &m.values[i][j2]);
+        swap(&m.values[i][j1], &m.values[i][j2], sizeof(int));
 }
 
 bool isSquareMatrix(matrix m) {
@@ -120,4 +113,13 @@ bool isSymmetricMatrix(matrix m) {
     }
 
     return true;
+}
+
+void transposeSquareMatrix(matrix m){
+    for(int i = 0; i < m.nRows; i++){
+        for(int j = 0; j < m.nCols; j++){
+            if(i != j)
+                swap(&m.values[i][j], &m.values[j][i], sizeof(int));
+        }
+    }
 }
