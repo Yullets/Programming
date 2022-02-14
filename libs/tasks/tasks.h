@@ -23,6 +23,12 @@ void test_sortRowsByMaxElement1();
 
 void test_sortRowsByMaxElement2();
 
+//возвращает минимальное значение элементов строки.
+int getMin(const int *a, int n);
+
+//сортирует матрицу по неубыванию минимальных значений в столбцах.
+void sortColsByMinElement(matrix m);
+
 void tests();
 
 #endif //COURSE_TASKS_H

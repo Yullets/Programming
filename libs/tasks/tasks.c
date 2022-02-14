@@ -127,9 +127,47 @@ void test_sortRowsByMaxElement2() {
     freeMemMatrix(&m1);
 }
 
+int getMin(const int *a, int n) {
+    int minElement = a[0];
+    for (int i = 1; i < n; i++) {
+        if (a[i] < minElement)
+            minElement = a[i];
+    }
+    return minElement;
+}
+
+void sortColsByMinElement(matrix m){
+    insertionSortColsMatrixByColCriteria(m, getMin);
+}
+
+void test_sortColsByMinElement() {
+    matrix m = createMatrixFromArray(
+            (int[]) {
+                    3, 5, 2, 4, 3, 3,
+                    2, 5, 1, 8, 2, 7,
+                    6, 1, 4, 4, 8, 3,
+            },
+            3, 6);
+    sortColsByMinElement(m);
+
+    matrix m1 = createMatrixFromArray(
+            (int[]) {
+                    5, 2, 3, 3, 3, 4,
+                    5, 1, 2, 2, 7, 8,
+                    1, 4, 6, 8, 3, 4,
+            },
+            3, 6);
+
+    assert(twoMatricesEqual(m, m1));
+
+    freeMemMatrix(&m);
+    freeMemMatrix(&m1);
+}
+
 void tests() {
     test_changeRowsWithMinAndMaxEl1();
     test_changeRowsWithMinAndMaxEl2();
     test_sortRowsByMaxElement1();
     test_sortRowsByMaxElement2();
+    test_sortColsByMinElement();
 }
