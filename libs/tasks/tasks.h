@@ -9,7 +9,20 @@
 //минимальный элементы.
 void changeRowsWithMinAndMaxEl (matrix m);
 
-//
+void test_changeRowsWithMinAndMaxEl1();
+
+void test_changeRowsWithMinAndMaxEl2();
+
+//возвращает максимальное значение элементов строки.
+int getMax(const int *a, int n);
+
+//сортирует матрицу по неубыванию максимальных значений в строках.
+void sortRowsByMaxElement(matrix m);
+
+void test_sortRowsByMaxElement1();
+
+void test_sortRowsByMaxElement2();
+
 void tests();
 
 #endif //COURSE_TASKS_H

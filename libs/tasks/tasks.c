@@ -127,10 +127,9 @@ void test_sortRowsByMaxElement2() {
     freeMemMatrix(&m1);
 }
 
-
 void tests() {
     test_changeRowsWithMinAndMaxEl1();
     test_changeRowsWithMinAndMaxEl2();
-    test_changeRowsWithMinAndMaxEl1();
-    test_changeRowsWithMinAndMaxEl2();
+    test_sortRowsByMaxElement1();
+    test_sortRowsByMaxElement2();
 }
