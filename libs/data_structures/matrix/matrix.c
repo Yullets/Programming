@@ -145,18 +145,18 @@ void insertionSortRowsMatrixByRowCriteria(matrix m,
 
 void insertionSortColsMatrixByColCriteria(matrix m,
                                           int (*criteria)(int *, int)) {
-    int *colsCriteria = (int*) malloc(sizeof(int) * m.nCols);
-    int *currentCol = (int*) malloc(sizeof(int) * m.nRows);
+    int *colsCriteria = (int *) malloc(sizeof(int) * m.nCols);
+    int *currentCol = (int *) malloc(sizeof(int) * m.nRows);
 
-    for(int j = 0; j < m.nCols; j++) {
-        for(int i = 0; i < m.nRows; i++)
+    for (int j = 0; j < m.nCols; j++) {
+        for (int i = 0; i < m.nRows; i++)
             currentCol[i] = m.values[i][j];
 
         colsCriteria[j] = criteria(currentCol, m.nRows);
     }
     free(currentCol);
 
-    for(int j = 1; j < m.nCols; j++) {
+    for (int j = 1; j < m.nCols; j++) {
         int currentIndex = j;
         while (currentIndex > 0 && colsCriteria[currentIndex] < colsCriteria[currentIndex - 1]) {
             swapColumns(m, currentIndex, currentIndex - 1);
@@ -169,4 +169,31 @@ void insertionSortColsMatrixByColCriteria(matrix m,
     free(colsCriteria);
 }
 
+position getMinValuePos(matrix m) {
+    position minPos = {0, 0};
+
+    for (int i = 0; i < m.nRows; i++) {
+        for (int j = 0; j < m.nCols; j++) {
+            position currentPos = {i, j};
+            if (m.values[currentPos.rowIndex][currentPos.colIndex] <
+                m.values[minPos.rowIndex][minPos.colIndex])
+                minPos = currentPos;
+        }
+    }
+
+    return minPos;
+}
+
+position getMaxValuePos(matrix m) {
+    position maxPos = {0, 0};
+
+    for (int i = 0; i < m.nRows; i++) {
+        for (int j = 0; j < m.nCols; j++) {
+            position currentPos = {i, j};
+            if (m.values[currentPos.rowIndex][currentPos.colIndex] >
+                m.values[maxPos.rowIndex][maxPos.colIndex])
+                maxPos = currentPos;
+        }
+    }
+}
 
