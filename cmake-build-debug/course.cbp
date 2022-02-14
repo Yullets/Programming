@@ -5,7 +5,7 @@
 		<Option title="course"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\libs\;CMake Files\libs\data_structures\;CMake Files\libs\algorithms\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\libs\;CMake Files\libs\data_structures\;CMake Files\libs\algorithms\;CMake Files\libs\tasks\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Users/Fr/CLionProjects/course/cmake-build-debug"/>
@@ -145,6 +145,42 @@
 					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="tasks">
+				<Option output="C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks/libtasks.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks/Makefile&quot;  VERBOSE=1 tasks"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tasks/fast">
+				<Option output="C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks/libtasks.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks/Makefile&quot;  VERBOSE=1 tasks/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
 		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/algorithms/algorithm.c">
 			<Option target="algorithms"/>
@@ -195,7 +231,10 @@
 			<Option target="data_structures"/>
 		</Unit>
 		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/tasks/tasks.c">
-			<Option target="course"/>
+			<Option target="tasks"/>
+		</Unit>
+		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/tasks/tasks.h">
+			<Option target="tasks"/>
 		</Unit>
 		<Unit filename="C:/Users/Fr/CLionProjects/course/main.c">
 			<Option target="course"/>
@@ -211,6 +250,9 @@
 		</Unit>
 		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/algorithms/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\libs\algorithms\"/>
+		</Unit>
+		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/tasks/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libs\tasks\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

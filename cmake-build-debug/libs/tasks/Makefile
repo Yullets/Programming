@@ -64,16 +64,6 @@ CMAKE_BINARY_DIR = C:\Users\Fr\CLionProjects\course\cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -84,16 +74,26 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	"C:\Program Files\JetBrains\CLion 2021.2.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Fr\CLionProjects\course\cmake-build-debug\CMakeFiles C:\Users\Fr\CLionProjects\course\cmake-build-debug\\CMakeFiles\progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
+	cd /d C:\Users\Fr\CLionProjects\course\cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Fr\CLionProjects\course\cmake-build-debug\CMakeFiles C:\Users\Fr\CLionProjects\course\cmake-build-debug\libs\tasks\\CMakeFiles\progress.marks
+	cd /d C:\Users\Fr\CLionProjects\course\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 libs/tasks/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Fr\CLionProjects\course\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 clean
+	cd /d C:\Users\Fr\CLionProjects\course\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 libs/tasks/clean
 .PHONY : clean
 
 # The main clean target
@@ -102,94 +102,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 preinstall
+	cd /d C:\Users\Fr\CLionProjects\course\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 libs/tasks/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 preinstall
+	cd /d C:\Users\Fr\CLionProjects\course\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 libs/tasks/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d C:\Users\Fr\CLionProjects\course\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named course
+# Convenience name for target.
+libs/tasks/CMakeFiles/tasks.dir/rule:
+	cd /d C:\Users\Fr\CLionProjects\course\cmake-build-debug && $(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 libs/tasks/CMakeFiles/tasks.dir/rule
+.PHONY : libs/tasks/CMakeFiles/tasks.dir/rule
 
-# Build rule for target.
-course: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 course
-.PHONY : course
-
-# fast build rule for target.
-course/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\course.dir\build.make CMakeFiles/course.dir/build
-.PHONY : course/fast
-
-#=============================================================================
-# Target rules for targets named data_structures
-
-# Build rule for target.
-data_structures: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 data_structures
-.PHONY : data_structures
-
-# fast build rule for target.
-data_structures/fast:
-	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/build
-.PHONY : data_structures/fast
-
-#=============================================================================
-# Target rules for targets named algorithms
-
-# Build rule for target.
-algorithms: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 algorithms
-.PHONY : algorithms
-
-# fast build rule for target.
-algorithms/fast:
-	$(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/build
-.PHONY : algorithms/fast
-
-#=============================================================================
-# Target rules for targets named tasks
-
-# Build rule for target.
-tasks: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 tasks
+# Convenience name for target.
+tasks: libs/tasks/CMakeFiles/tasks.dir/rule
 .PHONY : tasks
 
 # fast build rule for target.
 tasks/fast:
-	$(MAKE) $(MAKESILENT) -f libs\tasks\CMakeFiles\tasks.dir\build.make libs/tasks/CMakeFiles/tasks.dir/build
+	cd /d C:\Users\Fr\CLionProjects\course\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\tasks\CMakeFiles\tasks.dir\build.make libs/tasks/CMakeFiles/tasks.dir/build
 .PHONY : tasks/fast
 
-main.obj: main.c.obj
-.PHONY : main.obj
+tasks.obj: tasks.c.obj
+.PHONY : tasks.obj
 
 # target to build an object file
-main.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\course.dir\build.make CMakeFiles/course.dir/main.c.obj
-.PHONY : main.c.obj
+tasks.c.obj:
+	cd /d C:\Users\Fr\CLionProjects\course\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\tasks\CMakeFiles\tasks.dir\build.make libs/tasks/CMakeFiles/tasks.dir/tasks.c.obj
+.PHONY : tasks.c.obj
 
-main.i: main.c.i
-.PHONY : main.i
+tasks.i: tasks.c.i
+.PHONY : tasks.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\course.dir\build.make CMakeFiles/course.dir/main.c.i
-.PHONY : main.c.i
+tasks.c.i:
+	cd /d C:\Users\Fr\CLionProjects\course\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\tasks\CMakeFiles\tasks.dir\build.make libs/tasks/CMakeFiles/tasks.dir/tasks.c.i
+.PHONY : tasks.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+tasks.s: tasks.c.s
+.PHONY : tasks.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\course.dir\build.make CMakeFiles/course.dir/main.c.s
-.PHONY : main.c.s
+tasks.c.s:
+	cd /d C:\Users\Fr\CLionProjects\course\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\tasks\CMakeFiles\tasks.dir\build.make libs/tasks/CMakeFiles/tasks.dir/tasks.c.s
+.PHONY : tasks.c.s
 
 # Help Target
 help:
@@ -199,13 +161,10 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... algorithms
-	@echo ... course
-	@echo ... data_structures
 	@echo ... tasks
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... tasks.obj
+	@echo ... tasks.i
+	@echo ... tasks.s
 .PHONY : help
 
 
@@ -217,6 +176,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d C:\Users\Fr\CLionProjects\course\cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

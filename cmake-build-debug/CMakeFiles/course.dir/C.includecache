@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Fr/CLionProjects/course/libs/data_structures/vector/vector.h
-stdio.h
+C:/Users/Fr/CLionProjects/course/libs/data_structures/matrix/matrix.h
+stdint.h
 -
-malloc.h
+assert.h
+-
+memory.h
+-
+stdio.h
 -
 stdbool.h
 -
 
-C:/Users/Fr/CLionProjects/course/libs/data_structures/vector/vectorVoid.h
-stdio.h
--
-limits.h
--
+C:/Users/Fr/CLionProjects/course/libs/tasks/tasks.h
 
 C:/Users/Fr/CLionProjects/course/main.c
 stdio.h
@@ -27,8 +27,8 @@ stdint.h
 -
 assert.h
 -
-libs/data_structures/vector/vector.h
-C:/Users/Fr/CLionProjects/course/libs/data_structures/vector/vector.h
-libs/data_structures/vector/vectorVoid.h
-C:/Users/Fr/CLionProjects/course/libs/data_structures/vector/vectorVoid.h
+libs/data_structures/matrix/matrix.h
+C:/Users/Fr/CLionProjects/course/libs/data_structures/matrix/matrix.h
+libs/tasks/tasks.h
+C:/Users/Fr/CLionProjects/course/libs/tasks/tasks.h
 

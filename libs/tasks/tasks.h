@@ -9,4 +9,7 @@
 //минимальный элементы.
 void changeRowsWithMinAndMaxEl (matrix m);
 
+//
+void tests();
+
 #endif //COURSE_TASKS_H

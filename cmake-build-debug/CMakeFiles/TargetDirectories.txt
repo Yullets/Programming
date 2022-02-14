@@ -9,3 +9,6 @@ C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/data_structures/CMakeFil
 C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/algorithms/CMakeFiles/algorithms.dir
 C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/algorithms/CMakeFiles/edit_cache.dir
 C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/algorithms/CMakeFiles/rebuild_cache.dir
+C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks/CMakeFiles/rebuild_cache.dir
+C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks/CMakeFiles/tasks.dir
+C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks/CMakeFiles/edit_cache.dir

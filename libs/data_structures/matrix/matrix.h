@@ -5,6 +5,12 @@
 #ifndef COURSE_MATRIX_H
 #define COURSE_MATRIX_H
 
+#include <stdint.h>
+#include <assert.h>
+#include <memory.h>
+#include <stdio.h>
+#include <stdbool.h>
+
 typedef struct matrix {
     int **values; // элементы матрицы
     int nRows; // количество рядов

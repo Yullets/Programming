@@ -81,16 +81,19 @@ clean: libs/clean
 # Recursive "all" directory target.
 libs/all: libs/data_structures/all
 libs/all: libs/algorithms/all
+libs/all: libs/tasks/all
 .PHONY : libs/all
 
 # Recursive "preinstall" directory target.
 libs/preinstall: libs/data_structures/preinstall
 libs/preinstall: libs/algorithms/preinstall
+libs/preinstall: libs/tasks/preinstall
 .PHONY : libs/preinstall
 
 # Recursive "clean" directory target.
 libs/clean: libs/data_structures/clean
 libs/clean: libs/algorithms/clean
+libs/clean: libs/tasks/clean
 .PHONY : libs/clean
 
 #=============================================================================
@@ -124,19 +127,35 @@ libs/data_structures/clean: libs/data_structures/CMakeFiles/data_structures.dir/
 .PHONY : libs/data_structures/clean
 
 #=============================================================================
+# Directory level rules for directory libs/tasks
+
+# Recursive "all" directory target.
+libs/tasks/all: libs/tasks/CMakeFiles/tasks.dir/all
+.PHONY : libs/tasks/all
+
+# Recursive "preinstall" directory target.
+libs/tasks/preinstall:
+.PHONY : libs/tasks/preinstall
+
+# Recursive "clean" directory target.
+libs/tasks/clean: libs/tasks/CMakeFiles/tasks.dir/clean
+.PHONY : libs/tasks/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/course.dir
 
 # All Build rule for target.
 CMakeFiles/course.dir/all: libs/data_structures/CMakeFiles/data_structures.dir/all
 CMakeFiles/course.dir/all: libs/algorithms/CMakeFiles/algorithms.dir/all
+CMakeFiles/course.dir/all: libs/tasks/CMakeFiles/tasks.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\course.dir\build.make CMakeFiles/course.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\course.dir\build.make CMakeFiles/course.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Fr\CLionProjects\course\cmake-build-debug\CMakeFiles --progress-num=4,5,6 "Built target course"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Fr\CLionProjects\course\cmake-build-debug\CMakeFiles --progress-num=4,5 "Built target course"
 .PHONY : CMakeFiles/course.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/course.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Fr\CLionProjects\course\cmake-build-debug\CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Fr\CLionProjects\course\cmake-build-debug\CMakeFiles 14
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/course.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Fr\CLionProjects\course\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/course.dir/rule
@@ -157,7 +176,7 @@ CMakeFiles/course.dir/clean:
 libs/data_structures/CMakeFiles/data_structures.dir/all:
 	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/depend
 	$(MAKE) $(MAKESILENT) -f libs\data_structures\CMakeFiles\data_structures.dir\build.make libs/data_structures/CMakeFiles/data_structures.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Fr\CLionProjects\course\cmake-build-debug\CMakeFiles --progress-num=7,8,9,10,11,12,13 "Built target data_structures"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Fr\CLionProjects\course\cmake-build-debug\CMakeFiles --progress-num=6,7,8,9,10,11,12 "Built target data_structures"
 .PHONY : libs/data_structures/CMakeFiles/data_structures.dir/all
 
 # Build rule for subdir invocation for target.
@@ -201,6 +220,33 @@ algorithms: libs/algorithms/CMakeFiles/algorithms.dir/rule
 libs/algorithms/CMakeFiles/algorithms.dir/clean:
 	$(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/clean
 .PHONY : libs/algorithms/CMakeFiles/algorithms.dir/clean
+
+#=============================================================================
+# Target rules for target libs/tasks/CMakeFiles/tasks.dir
+
+# All Build rule for target.
+libs/tasks/CMakeFiles/tasks.dir/all: libs/data_structures/CMakeFiles/data_structures.dir/all
+libs/tasks/CMakeFiles/tasks.dir/all: libs/algorithms/CMakeFiles/algorithms.dir/all
+	$(MAKE) $(MAKESILENT) -f libs\tasks\CMakeFiles\tasks.dir\build.make libs/tasks/CMakeFiles/tasks.dir/depend
+	$(MAKE) $(MAKESILENT) -f libs\tasks\CMakeFiles\tasks.dir\build.make libs/tasks/CMakeFiles/tasks.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Fr\CLionProjects\course\cmake-build-debug\CMakeFiles --progress-num=13,14 "Built target tasks"
+.PHONY : libs/tasks/CMakeFiles/tasks.dir/all
+
+# Build rule for subdir invocation for target.
+libs/tasks/CMakeFiles/tasks.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Fr\CLionProjects\course\cmake-build-debug\CMakeFiles 12
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 libs/tasks/CMakeFiles/tasks.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Fr\CLionProjects\course\cmake-build-debug\CMakeFiles 0
+.PHONY : libs/tasks/CMakeFiles/tasks.dir/rule
+
+# Convenience name for target.
+tasks: libs/tasks/CMakeFiles/tasks.dir/rule
+.PHONY : tasks
+
+# clean rule for target.
+libs/tasks/CMakeFiles/tasks.dir/clean:
+	$(MAKE) $(MAKESILENT) -f libs\tasks\CMakeFiles\tasks.dir\build.make libs/tasks/CMakeFiles/tasks.dir/clean
+.PHONY : libs/tasks/CMakeFiles/tasks.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
