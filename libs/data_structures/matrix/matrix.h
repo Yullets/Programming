@@ -68,4 +68,16 @@ bool isSymmetricMatrix(matrix m);
 //транспонирует квадратную матрицу m.
 void transposeSquareMatrix(matrix m);
 
+//выполняет сортировку вставками строк
+//матрицы m по неубыванию значения функции criteria применяемой для
+//строк
+void insertionSortRowsMatrixByRowCriteria(matrix m,
+                                          int (*criteria)(int *, int));
+
+//выполняет сортировку вставками
+//столбцов матрицы m по неубыванию значения функции criteria приме-
+//няемой для столбцов
+void insertionSortColsMatrixByColCriteria(matrix m,
+                                          int (*criteria)(int *, int));
+
 #endif //COURSE_MATRIX_H

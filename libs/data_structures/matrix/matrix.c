@@ -115,11 +115,58 @@ bool isSymmetricMatrix(matrix m) {
     return true;
 }
 
-void transposeSquareMatrix(matrix m){
-    for(int i = 0; i < m.nRows; i++){
-        for(int j = 0; j < m.nCols; j++){
-            if(i != j)
+void transposeSquareMatrix(matrix m) {
+    for (int i = 0; i < m.nRows; i++) {
+        for (int j = 0; j < m.nCols; j++) {
+            if (i != j)
                 swap(&m.values[i][j], &m.values[j][i], sizeof(int));
         }
     }
 }
+
+void insertionSortRowsMatrixByRowCriteria(matrix m,
+                                          int (*criteria)(int *, int)) {
+    int *rowsCriteria = (int *) malloc(sizeof(int) * m.nRows);
+
+    for (int i = 0; i < m.nRows; i++)
+        rowsCriteria[i] = criteria(m.values[i], m.nCols);
+
+    for (int i = 1; i < m.nRows; i++) {
+        int currentIndex = i;
+        while (currentIndex > 0 && rowsCriteria[i] < rowsCriteria[i - 1]) {
+            swapRows(m, currentIndex, currentIndex - 1);
+            swap(&rowsCriteria[currentIndex], &rowsCriteria[currentIndex - 1], sizeof(int));
+            currentIndex--;
+        }
+    }
+
+    free(rowsCriteria);
+}
+
+void insertionSortColsMatrixByColCriteria(matrix m,
+                                          int (*criteria)(int *, int)) {
+    int *colsCriteria = (int*) malloc(sizeof(int) * m.nCols);
+    int *currentCol = (int*) malloc(sizeof(int) * m.nRows);
+
+    for(int j = 0; j < m.nCols; j++) {
+        for(int i = 0; i < m.nRows; i++)
+            currentCol[i] = m.values[i][j];
+
+        colsCriteria[j] = criteria(currentCol, m.nRows);
+    }
+    free(currentCol);
+
+    for(int j = 1; j < m.nCols; j++) {
+        int currentIndex = j;
+        while (currentIndex > 0 && colsCriteria[currentIndex] < colsCriteria[currentIndex - 1]) {
+            swapColumns(m, currentIndex, currentIndex - 1);
+            swap(&colsCriteria[currentIndex], &colsCriteria[currentIndex - 1], sizeof(int));
+
+            currentIndex--;
+        }
+    }
+
+    free(colsCriteria);
+}
+
+
