@@ -154,6 +154,30 @@ algorithms/fast:
 	$(MAKE) $(MAKESILENT) -f libs\algorithms\CMakeFiles\algorithms.dir\build.make libs/algorithms/CMakeFiles/algorithms.dir/build
 .PHONY : algorithms/fast
 
+libs/tasks/tasks.obj: libs/tasks/tasks.c.obj
+.PHONY : libs/tasks/tasks.obj
+
+# target to build an object file
+libs/tasks/tasks.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\course.dir\build.make CMakeFiles/course.dir/libs/tasks/tasks.c.obj
+.PHONY : libs/tasks/tasks.c.obj
+
+libs/tasks/tasks.i: libs/tasks/tasks.c.i
+.PHONY : libs/tasks/tasks.i
+
+# target to preprocess a source file
+libs/tasks/tasks.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\course.dir\build.make CMakeFiles/course.dir/libs/tasks/tasks.c.i
+.PHONY : libs/tasks/tasks.c.i
+
+libs/tasks/tasks.s: libs/tasks/tasks.c.s
+.PHONY : libs/tasks/tasks.s
+
+# target to generate assembly for a file
+libs/tasks/tasks.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\course.dir\build.make CMakeFiles/course.dir/libs/tasks/tasks.c.s
+.PHONY : libs/tasks/tasks.c.s
+
 main.obj: main.c.obj
 .PHONY : main.obj
 
@@ -189,6 +213,9 @@ help:
 	@echo ... algorithms
 	@echo ... course
 	@echo ... data_structures
+	@echo ... libs/tasks/tasks.obj
+	@echo ... libs/tasks/tasks.i
+	@echo ... libs/tasks/tasks.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

@@ -86,4 +86,16 @@ position getMinValuePos(matrix m);
 //возвращает позицию максимального элемента матрицы m.
 position getMaxValuePos(matrix m);
 
+//возвращает матрицу, размера nRows на nCols, по-
+//строенного из элементов массива a, размещенную в динамической
+//памяти.
+matrix createMatrixFromArray(const int *a, int nRows,
+                             int nCols);
+
+//возвращает ука-
+//затель на нулевую матрицу массива из nMatrices матриц, размещенных
+//в динамической памяти, построенных из элементов массива a
+matrix *createArrayOfMatrixFromArray(const int *values,
+                                     int nMatrices, int nRows, int nCols);
+
 #endif //COURSE_MATRIX_H
