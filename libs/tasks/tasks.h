@@ -37,4 +37,8 @@ long long getSum(const int *a, int n);
 //транспонирует матрицу, если среди сумм элементов строки нет равных.
 void transposeIfMatrixHasNotEqualSumOfRows(matrix m);
 
+//возвращает значение 'истина', если матрицы взаимно обратные,
+//иначе - 'ложь'.
+bool isMutuallyInverseMatrices(matrix m1, matrix m2);
+
 #endif //COURSE_TASKS_H

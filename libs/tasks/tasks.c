@@ -47,10 +47,10 @@ void sortColsByMinElement(matrix m) {
 
 
 matrix mulMatrices(matrix m1, matrix m2) {
-    matrix m3 = getMemMatrix(m1.nRows, m1.nCols);
+    matrix m3 = getMemMatrix(m1.nRows, m2.nCols);
 
     for (int i = 0; i < m1.nRows; i++) {
-        for (int j = 0; j < m1.nCols; j++) {
+        for (int j = 0; j < m2.nCols; j++) {
             m3.values[i][j] = 0;
             for (int k = 0; k < m1.nCols; k++) {
                 m3.values[i][j] += m1.values[i][k] * m2.values[k][j];
@@ -98,5 +98,14 @@ void transposeIfMatrixHasNotEqualSumOfRows(matrix m) {
 
     if (isUnique(a, m.nRows))
         transposeSquareMatrix(m);
+}
+
+bool isMutuallyInverseMatrices(matrix m1, matrix m2) {
+    matrix mul = mulMatrices(m1, m2);
+
+    bool res = isEMatrix(mul);
+    freeMemMatrix(&mul);
+
+    return res;
 }
 
