@@ -117,6 +117,8 @@ long long findSumOfMaxesOfPseudoDiagonal(matrix m) {
         while (rowIndex < m.nRows && colIndex < m.nCols) {
             if (m.values[rowIndex][colIndex] > maxValue1)
                 maxValue1 = m.values[rowIndex][colIndex];
+            rowIndex++;
+            colIndex++;
         }
         sum += maxValue1;
     }
@@ -128,6 +130,8 @@ long long findSumOfMaxesOfPseudoDiagonal(matrix m) {
         while (colIndex < m.nCols && rowIndex < m.nRows) {
             if (m.values[rowIndex][colIndex] > maxValue2)
                 maxValue2 = m.values[rowIndex][colIndex];
+            rowIndex++;
+            colIndex++;
         }
         sum += maxValue2;
     }
