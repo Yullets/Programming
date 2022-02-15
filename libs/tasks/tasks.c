@@ -109,3 +109,34 @@ bool isMutuallyInverseMatrices(matrix m1, matrix m2) {
     return res;
 }
 
+int max(int a, int b) {
+    return a > b ? a : b;
+}
+
+int min(int a, int b) {
+    return a < b ? a : b;
+}
+
+int getMinInArea(matrix m) {
+    position posMax = getMaxValuePos(m);
+
+    int rowI = posMax.rowIndex;
+
+    int leftColI = posMax.colIndex;
+    int rightColI = posMax.colIndex;
+
+    int minValue = m.values[posMax.rowIndex][posMax.colIndex];
+    while (rowI >= 0) {
+        for (int i = leftColI; i < rightColI; i++)
+            minValue = min(m.values[rowI][i], minValue);
+
+        if (leftColI > 0)
+            leftColI--;
+
+        if (rightColI + 1 < m.nCols)
+            rightColI++;
+        rowI--;
+    }
+
+    return minValue;
+}

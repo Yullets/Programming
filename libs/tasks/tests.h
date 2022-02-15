@@ -27,6 +27,8 @@ void test_isMutuallyInverseMatrices1();
 
 void test_isMutuallyInverseMatrices2();
 
+void test_getMinInArea();
+
 void tests();
 
 #endif //COURSE_TESTS_H

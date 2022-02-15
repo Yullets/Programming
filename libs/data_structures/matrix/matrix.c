@@ -195,6 +195,8 @@ position getMaxValuePos(matrix m) {
                 maxPos = currentPos;
         }
     }
+
+    return maxPos;
 }
 
 matrix createMatrixFromArray(const int *a,
@@ -221,3 +223,4 @@ matrix *createArrayOfMatrixFromArray(const int *values,
 
     return ms;
 }
+

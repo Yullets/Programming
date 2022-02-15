@@ -41,4 +41,13 @@ void transposeIfMatrixHasNotEqualSumOfRows(matrix m);
 //иначе - 'ложь'.
 bool isMutuallyInverseMatrices(matrix m1, matrix m2);
 
+//возвращает максимальное значение из a и b.
+int max(int a, int b);
+
+//возвращает минимальное значение из a и b.
+int min(int a, int b);
+
+//возвращает минимальное значение из выделенной территории.
+int getMinInArea(matrix m);
+
 #endif //COURSE_TASKS_H
