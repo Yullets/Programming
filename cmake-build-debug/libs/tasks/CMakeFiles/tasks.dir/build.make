@@ -78,17 +78,32 @@ libs/tasks/CMakeFiles/tasks.dir/tasks.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tasks.dir/tasks.c.s"
 	cd /d C:\Users\Fr\CLionProjects\course\cmake-build-debug\libs\tasks && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Fr\CLionProjects\course\libs\tasks\tasks.c -o CMakeFiles\tasks.dir\tasks.c.s
 
+libs/tasks/CMakeFiles/tasks.dir/tests.c.obj: libs/tasks/CMakeFiles/tasks.dir/flags.make
+libs/tasks/CMakeFiles/tasks.dir/tests.c.obj: ../libs/tasks/tests.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Fr\CLionProjects\course\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object libs/tasks/CMakeFiles/tasks.dir/tests.c.obj"
+	cd /d C:\Users\Fr\CLionProjects\course\cmake-build-debug\libs\tasks && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\tasks.dir\tests.c.obj -c C:\Users\Fr\CLionProjects\course\libs\tasks\tests.c
+
+libs/tasks/CMakeFiles/tasks.dir/tests.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tasks.dir/tests.c.i"
+	cd /d C:\Users\Fr\CLionProjects\course\cmake-build-debug\libs\tasks && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Fr\CLionProjects\course\libs\tasks\tests.c > CMakeFiles\tasks.dir\tests.c.i
+
+libs/tasks/CMakeFiles/tasks.dir/tests.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tasks.dir/tests.c.s"
+	cd /d C:\Users\Fr\CLionProjects\course\cmake-build-debug\libs\tasks && C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Fr\CLionProjects\course\libs\tasks\tests.c -o CMakeFiles\tasks.dir\tests.c.s
+
 # Object files for target tasks
 tasks_OBJECTS = \
-"CMakeFiles/tasks.dir/tasks.c.obj"
+"CMakeFiles/tasks.dir/tasks.c.obj" \
+"CMakeFiles/tasks.dir/tests.c.obj"
 
 # External object files for target tasks
 tasks_EXTERNAL_OBJECTS =
 
 libs/tasks/libtasks.a: libs/tasks/CMakeFiles/tasks.dir/tasks.c.obj
+libs/tasks/libtasks.a: libs/tasks/CMakeFiles/tasks.dir/tests.c.obj
 libs/tasks/libtasks.a: libs/tasks/CMakeFiles/tasks.dir/build.make
 libs/tasks/libtasks.a: libs/tasks/CMakeFiles/tasks.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Fr\CLionProjects\course\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libtasks.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Fr\CLionProjects\course\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C static library libtasks.a"
 	cd /d C:\Users\Fr\CLionProjects\course\cmake-build-debug\libs\tasks && $(CMAKE_COMMAND) -P CMakeFiles\tasks.dir\cmake_clean_target.cmake
 	cd /d C:\Users\Fr\CLionProjects\course\cmake-build-debug\libs\tasks && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\tasks.dir\link.txt --verbose=$(VERBOSE)
 

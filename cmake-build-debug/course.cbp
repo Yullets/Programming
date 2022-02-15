@@ -236,6 +236,12 @@
 		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/tasks/tasks.h">
 			<Option target="tasks"/>
 		</Unit>
+		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/tasks/tests.c">
+			<Option target="tasks"/>
+		</Unit>
+		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/tasks/tests.h">
+			<Option target="tasks"/>
+		</Unit>
 		<Unit filename="C:/Users/Fr/CLionProjects/course/main.c">
 			<Option target="course"/>
 		</Unit>

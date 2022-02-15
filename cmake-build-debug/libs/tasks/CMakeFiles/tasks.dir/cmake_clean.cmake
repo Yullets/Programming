@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/tasks.dir/tasks.c.obj"
+  "CMakeFiles/tasks.dir/tests.c.obj"
   "libtasks.a"
   "libtasks.pdb"
 )

@@ -153,6 +153,30 @@ tasks.c.s:
 	cd /d C:\Users\Fr\CLionProjects\course\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\tasks\CMakeFiles\tasks.dir\build.make libs/tasks/CMakeFiles/tasks.dir/tasks.c.s
 .PHONY : tasks.c.s
 
+tests.obj: tests.c.obj
+.PHONY : tests.obj
+
+# target to build an object file
+tests.c.obj:
+	cd /d C:\Users\Fr\CLionProjects\course\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\tasks\CMakeFiles\tasks.dir\build.make libs/tasks/CMakeFiles/tasks.dir/tests.c.obj
+.PHONY : tests.c.obj
+
+tests.i: tests.c.i
+.PHONY : tests.i
+
+# target to preprocess a source file
+tests.c.i:
+	cd /d C:\Users\Fr\CLionProjects\course\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\tasks\CMakeFiles\tasks.dir\build.make libs/tasks/CMakeFiles/tasks.dir/tests.c.i
+.PHONY : tests.c.i
+
+tests.s: tests.c.s
+.PHONY : tests.s
+
+# target to generate assembly for a file
+tests.c.s:
+	cd /d C:\Users\Fr\CLionProjects\course\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\tasks\CMakeFiles\tasks.dir\build.make libs/tasks/CMakeFiles/tasks.dir/tests.c.s
+.PHONY : tests.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -165,6 +189,9 @@ help:
 	@echo ... tasks.obj
 	@echo ... tasks.i
 	@echo ... tasks.s
+	@echo ... tests.obj
+	@echo ... tests.i
+	@echo ... tests.s
 .PHONY : help
 
 

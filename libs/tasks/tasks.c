@@ -9,61 +9,12 @@
 #include "../algorithms/algorithm.h"
 #include "../data_structures/matrix/matrix.h"
 #include "tasks.h"
+#include "../algorithms/array/array.h"
 
 void changeRowsWithMinAndMaxEl(matrix m) {
     position minPos = getMinValuePos(m);
     position maxPos = getMaxValuePos(m);
     swapRows(m, minPos.rowIndex, maxPos.rowIndex);
-}
-
-void test_changeRowsWithMinAndMaxEl1() {
-    matrix m = createMatrixFromArray(
-            (int[]) {
-                    1, 2, 0,
-                    3, 6, 9,
-                    7, 8, 5,
-            },
-            3, 3);
-
-    changeRowsWithMinAndMaxEl(m);
-
-    matrix m1 = createMatrixFromArray(
-            (int[]) {
-                    3, 6, 9,
-                    1, 2, 0,
-                    7, 8, 5,
-            },
-            3, 3);
-
-    assert(twoMatricesEqual(m, m1));
-
-    freeMemMatrix(&m);
-    freeMemMatrix(&m1);
-}
-
-void test_changeRowsWithMinAndMaxEl2() {
-    matrix m = createMatrixFromArray(
-            (int[]) {
-                    9, 8, 7,
-                    6, 5, 4,
-                    3, 2, 1,
-            },
-            3, 3);
-
-    changeRowsWithMinAndMaxEl(m);
-
-    matrix m1 = createMatrixFromArray(
-            (int[]) {
-                    3, 2, 1,
-                    6, 5, 4,
-                    9, 8, 7,
-            },
-            3, 3);
-
-    assert(twoMatricesEqual(m, m1));
-
-    freeMemMatrix(&m);
-    freeMemMatrix(&m1);
 }
 
 int getMax(const int *a, int n) {
@@ -79,53 +30,6 @@ void sortRowsByMaxElement(matrix m) {
     insertionSortRowsMatrixByRowCriteria(m, getMax);
 }
 
-void test_sortRowsByMaxElement1() {
-    matrix m = createMatrixFromArray(
-            (int[]) {
-                7, 1, 2,
-                1, 8, 1,
-                3, 2, 3,
-            },
-            3, 3);
-    sortRowsByMaxElement(m);
-
-    matrix m1 = createMatrixFromArray(
-            (int[]) {
-                3, 2, 3,
-                7, 1, 2,
-                1, 8, 1,
-            },
-            3, 3);
-
-    assert(twoMatricesEqual(m, m1));
-
-    freeMemMatrix(&m);
-    freeMemMatrix(&m1);
-}
-
-void test_sortRowsByMaxElement2() {
-    matrix m = createMatrixFromArray(
-            (int[]) {
-                    2, 4, 1,
-                    1, 7, 7,
-                    0, 2, 9,
-            },
-            3, 3);
-    sortRowsByMaxElement(m);
-
-    matrix m1 = createMatrixFromArray(
-            (int[]) {
-                    2, 4, 1,
-                    1, 7, 7,
-                    0, 2, 9,
-            },
-            3, 3);
-
-    assert(twoMatricesEqual(m, m1));
-
-    freeMemMatrix(&m);
-    freeMemMatrix(&m1);
-}
 
 int getMin(const int *a, int n) {
     int minElement = a[0];
@@ -136,38 +40,36 @@ int getMin(const int *a, int n) {
     return minElement;
 }
 
-void sortColsByMinElement(matrix m){
+void sortColsByMinElement(matrix m) {
     insertionSortColsMatrixByColCriteria(m, getMin);
 }
 
-void test_sortColsByMinElement() {
-    matrix m = createMatrixFromArray(
-            (int[]) {
-                    3, 5, 2, 4, 3, 3,
-                    2, 5, 1, 8, 2, 7,
-                    6, 1, 4, 4, 8, 3,
-            },
-            3, 6);
-    sortColsByMinElement(m);
 
-    matrix m1 = createMatrixFromArray(
-            (int[]) {
-                    5, 2, 3, 3, 3, 4,
-                    5, 1, 2, 2, 7, 8,
-                    1, 4, 6, 8, 3, 4,
-            },
-            3, 6);
 
-    assert(twoMatricesEqual(m, m1));
+matrix mulMatrices(matrix m1, matrix m2) {
+    matrix m3 = getMemMatrix(m1.nRows, m1.nCols);
 
-    freeMemMatrix(&m);
-    freeMemMatrix(&m1);
+    for (int i = 0; i < m1.nRows; i++) {
+        for (int j = 0; j < m1.nCols; j++) {
+            m3.values[i][j] = 0;
+            for (int k = 0; k < m1.nCols; k++) {
+                m3.values[i][j] += m1.values[i][k] * m2.values[k][j];
+            }
+        }
+    }
+
+    return m3;
 }
 
-void tests() {
-    test_changeRowsWithMinAndMaxEl1();
-    test_changeRowsWithMinAndMaxEl2();
-    test_sortRowsByMaxElement1();
-    test_sortRowsByMaxElement2();
-    test_sortColsByMinElement();
+void getSquareOfMatrixIfSymmetric(matrix *m) {
+    if (!isSymmetricMatrix(*m))
+        return;
+
+    matrix square = mulMatrices(*m, *m);
+
+    freeMemMatrix(m);
+    *m = square;
 }
+
+
+

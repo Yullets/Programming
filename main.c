@@ -3,6 +3,7 @@
 #include <assert.h>
 #include "libs/data_structures/matrix/matrix.h"
 #include "libs/tasks/tasks.h"
+#include "libs/tasks/tests.h"
 
 
 

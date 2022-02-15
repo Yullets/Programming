@@ -9,19 +9,11 @@
 //минимальный элементы.
 void changeRowsWithMinAndMaxEl (matrix m);
 
-void test_changeRowsWithMinAndMaxEl1();
-
-void test_changeRowsWithMinAndMaxEl2();
-
 //возвращает максимальное значение элементов строки.
 int getMax(const int *a, int n);
 
 //сортирует матрицу по неубыванию максимальных значений в строках.
 void sortRowsByMaxElement(matrix m);
-
-void test_sortRowsByMaxElement1();
-
-void test_sortRowsByMaxElement2();
 
 //возвращает минимальное значение элементов строки.
 int getMin(const int *a, int n);
@@ -29,6 +21,10 @@ int getMin(const int *a, int n);
 //сортирует матрицу по неубыванию минимальных значений в столбцах.
 void sortColsByMinElement(matrix m);
 
-void tests();
+//перемножает матрицы.
+matrix mulMatrices(matrix m1, matrix m2);
+
+//возводит в квадрат симметричную матрицу.
+void getSquareOfMatrixIfSymmetric(matrix *m);
 
 #endif //COURSE_TASKS_H
