@@ -30,7 +30,7 @@ void test_changeRowsWithMinAndMaxEl1() {
             },
             3, 3);
 
-    assert(twoMatricesEqual(m, expectedM));
+    assert(areTwoMatricesEqual(m, expectedM));
 
     freeMemMatrix(&m);
     freeMemMatrix(&expectedM);
@@ -55,7 +55,7 @@ void test_changeRowsWithMinAndMaxEl2() {
             },
             3, 3);
 
-    assert(twoMatricesEqual(m, expectedM));
+    assert(areTwoMatricesEqual(m, expectedM));
 
     freeMemMatrix(&m);
     freeMemMatrix(&expectedM);
@@ -79,7 +79,7 @@ void test_sortRowsByMaxElement1() {
             },
             3, 3);
 
-    assert(twoMatricesEqual(m, expectedM));
+    assert(areTwoMatricesEqual(m, expectedM));
 
     freeMemMatrix(&m);
     freeMemMatrix(&expectedM);
@@ -103,7 +103,7 @@ void test_sortRowsByMaxElement2() {
             },
             3, 3);
 
-    assert(twoMatricesEqual(m, expectedM));
+    assert(areTwoMatricesEqual(m, expectedM));
 
     freeMemMatrix(&m);
     freeMemMatrix(&expectedM);
@@ -127,7 +127,7 @@ void test_sortColsByMinElement() {
             },
             3, 6);
 
-    assert(twoMatricesEqual(m, expectedM));
+    assert(areTwoMatricesEqual(m, expectedM));
 
     freeMemMatrix(&m);
     freeMemMatrix(&expectedM);
@@ -151,7 +151,7 @@ void test_getSquareOfMatrixIfSymmetric1() {
                     6, 1, 4,
             },
             3, 3);
-    assert(twoMatricesEqual(m, expectedM));
+    assert(areTwoMatricesEqual(m, expectedM));
     freeMemMatrix(&m);
     freeMemMatrix(&expectedM);
 }
@@ -174,7 +174,7 @@ void test_getSquareOfMatrixIfSymmetric2() {
                     14, 14, 38,
             },
             3, 3);
-    assert(twoMatricesEqual(m, expectedM));
+    assert(areTwoMatricesEqual(m, expectedM));
     freeMemMatrix(&m);
     freeMemMatrix(&expectedM);
 }
@@ -197,7 +197,7 @@ void test_transposeIfMatrixHasNotEqualSumOfRows1() {
             },
             3, 3);
 
-    assert(twoMatricesEqual(m, expectedM));
+    assert(areTwoMatricesEqual(m, expectedM));
     freeMemMatrix(&m);
     freeMemMatrix(&expectedM);
 }
@@ -219,7 +219,7 @@ void test_transposeIfMatrixHasNotEqualSumOfRows2() {
                     6, 1, 9,
             },
             3, 3);
-    assert(twoMatricesEqual(m, expectedM));
+    assert(areTwoMatricesEqual(m, expectedM));
     freeMemMatrix(&m);
     freeMemMatrix(&expectedM);
 }

@@ -72,7 +72,7 @@ bool isSquareMatrix(matrix m) {
     return m.nRows == m.nCols;
 }
 
-bool twoMatricesEqual(matrix m1, matrix m2) {
+bool areTwoMatricesEqual(matrix m1, matrix m2) {
     if (m1.nRows != m2.nRows || m1.nCols != m2.nCols)
         return false;
 
