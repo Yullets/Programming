@@ -19,6 +19,10 @@ void test_getSquareOfMatrixIfSymmetric1();
 
 void test_getSquareOfMatrixIfSymmetric2();
 
+void test_transposeIfMatrixHasNotEqualSumOfRows1();
+
+void test_transposeIfMatrixHasNotEqualSumOfRows2();
+
 void tests();
 
 #endif //COURSE_TESTS_H
