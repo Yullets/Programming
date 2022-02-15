@@ -45,7 +45,6 @@ void sortColsByMinElement(matrix m) {
 }
 
 
-
 matrix mulMatrices(matrix m1, matrix m2) {
     matrix m3 = getMemMatrix(m1.nRows, m2.nCols);
 
@@ -71,17 +70,17 @@ void getSquareOfMatrixIfSymmetric(matrix *m) {
     *m = square;
 }
 
-long long getSum(const int *a, int n){
+long long getSum(const int *a, int n) {
     int sum = 0;
-    for(int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
         sum += a[i];
 
     return sum;
 }
 
 bool isUnique(const long long *a, int n) {
-    for(int i = 0; i < n - 1; i++) {
-        for(int j = i + 1; j < n; j++) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = i + 1; j < n; j++) {
             if (a[i] == a[j])
                 return false;
         }
@@ -91,9 +90,9 @@ bool isUnique(const long long *a, int n) {
 }
 
 void transposeIfMatrixHasNotEqualSumOfRows(matrix m) {
-    int *a = (int*) malloc(sizeof(int) * m.nRows);
+    int *a = (int *) malloc(sizeof(int) * m.nRows);
 
-    for(int i = 0; i < m.nRows; i++)
+    for (int i = 0; i < m.nRows; i++)
         a[i] = getSum(m.values[i], m.nCols);
 
     if (isUnique(a, m.nRows))
@@ -109,8 +108,31 @@ bool isMutuallyInverseMatrices(matrix m1, matrix m2) {
     return res;
 }
 
-int max(int a, int b) {
-    return a > b ? a : b;
+long long findSumOfMaxesOfPseudoDiagonal(matrix m) {
+    int sum = 0;
+    for (int i = 1; i < m.nRows; i++) {
+        int rowIndex = i;
+        int colIndex = 0;
+        int maxValue1 = m.values[rowIndex][colIndex];
+        while (rowIndex < m.nRows && colIndex < m.nCols) {
+            if (m.values[rowIndex][colIndex] > maxValue1)
+                maxValue1 = m.values[rowIndex][colIndex];
+        }
+        sum += maxValue1;
+    }
+
+    for (int i = 1; i < m.nCols; i++) {
+        int rowIndex = 0;
+        int colIndex = i;
+        int maxValue2 = m.values[rowIndex][colIndex];
+        while (colIndex < m.nCols && rowIndex < m.nRows) {
+            if (m.values[rowIndex][colIndex] > maxValue2)
+                maxValue2 = m.values[rowIndex][colIndex];
+        }
+        sum += maxValue2;
+    }
+
+    return sum;
 }
 
 int min(int a, int b) {

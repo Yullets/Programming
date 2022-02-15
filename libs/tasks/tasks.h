@@ -21,7 +21,8 @@ int getMin(const int *a, int n);
 //сортирует матрицу по неубыванию минимальных значений в столбцах.
 void sortColsByMinElement(matrix m);
 
-//перемножает матрицы.
+//возвращает матрицу, которая является результатом
+//перемножения матриц m1 и m2.
 matrix mulMatrices(matrix m1, matrix m2);
 
 //возводит в квадрат симметричную матрицу.
@@ -41,8 +42,8 @@ void transposeIfMatrixHasNotEqualSumOfRows(matrix m);
 //иначе - 'ложь'.
 bool isMutuallyInverseMatrices(matrix m1, matrix m2);
 
-//возвращает максимальное значение из a и b.
-int max(int a, int b);
+//возвращае сумму максимальных элементов, находящихся на псевдодиагонали.
+long long findSumOfMaxesOfPseudoDiagonal(matrix m);
 
 //возвращает минимальное значение из a и b.
 int min(int a, int b);

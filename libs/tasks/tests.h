@@ -27,6 +27,8 @@ void test_isMutuallyInverseMatrices1();
 
 void test_isMutuallyInverseMatrices2();
 
+void test_findSumOfMaxesOfPseudoDiagonal();
+
 void test_getMinInArea();
 
 void tests();
