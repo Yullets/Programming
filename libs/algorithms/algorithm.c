@@ -10,9 +10,10 @@ int min2(long long a, long long b) {
 }
 
 void swap(void *a, void *b, size_t size) {
-    char *pa = a;
-    char *pb = b;
-    for(size_t i = 0; i < size; i++){
+    for (size_t i = 0; i < size; i++) {
+        char *pa = a + i;
+        char *pb = b + i;
+
         char t = *pa;
         *pa = *pb;
         *pb = t;

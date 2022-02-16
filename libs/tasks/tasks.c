@@ -90,13 +90,16 @@ bool isUnique(const long long *a, int n) {
 }
 
 void transposeIfMatrixHasNotEqualSumOfRows(matrix m) {
-    int *a = (int *) malloc(sizeof(int) * m.nRows);
+    long long *a = (long long *) malloc(sizeof(long long) * m.nRows);
 
     for (int i = 0; i < m.nRows; i++)
         a[i] = getSum(m.values[i], m.nCols);
 
-    if (isUnique(a, m.nRows))
+
+    if (isUnique(a, m.nCols))
         transposeSquareMatrix(m);
+
+    free(a);
 }
 
 bool isMutuallyInverseMatrices(matrix m1, matrix m2) {

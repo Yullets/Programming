@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Fr/CLionProjects/course/libs/tasks
+# Install script for directory: C:/Users/Yulia/CLionProjects/Programming/libs/tasks
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,6 +34,6 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/objdump.exe")
 endif()
 

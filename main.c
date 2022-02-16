@@ -5,9 +5,8 @@
 #include "libs/tasks/tasks.h"
 #include "libs/tasks/tests.h"
 
-
-
 int main() {
+
     tests();
     return 0;
 }

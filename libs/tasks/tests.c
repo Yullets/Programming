@@ -117,6 +117,7 @@ void test_sortColsByMinElement() {
                     6, 1, 4, 4, 8, 3,
             },
             3, 6);
+
     sortColsByMinElement(m);
 
     matrix expectedM = createMatrixFromArray(
@@ -198,6 +199,7 @@ void test_transposeIfMatrixHasNotEqualSumOfRows1() {
             3, 3);
 
     assert(areTwoMatricesEqual(m, expectedM));
+
     freeMemMatrix(&m);
     freeMemMatrix(&expectedM);
 }

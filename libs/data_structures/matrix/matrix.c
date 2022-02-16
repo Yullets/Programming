@@ -47,9 +47,11 @@ void inputMatrices(matrix *ms, int nMatrices) {
 }
 
 void outputMatrix(matrix m) {
-    for (int i = 0; i < m.nRows; i++)
+    for (int i = 0; i < m.nRows; i++) {
         for (int j = 0; j < m.nCols; j++)
-            printf("%d\n", m.values[i][j]);
+            printf("%d ", m.values[i][j]);
+        printf("\n");
+    }
 }
 
 void outputMatrices(matrix *ms, int nMatrices) {
@@ -58,9 +60,7 @@ void outputMatrices(matrix *ms, int nMatrices) {
 }
 
 void swapRows(matrix m, int i1, int i2) {
-    int *t = m.values[i1];
-    m.values[i1] = m.values[i2];
-    m.values[i2] = t;
+    swap(&m.values[i1], &m.values[i2], sizeof(int *));
 }
 
 void swapColumns(matrix m, int j1, int j2) {
@@ -117,9 +117,8 @@ bool isSymmetricMatrix(matrix m) {
 
 void transposeSquareMatrix(matrix m) {
     for (int i = 0; i < m.nRows; i++) {
-        for (int j = 0; j < m.nCols; j++) {
-            if (i != j)
-                swap(&m.values[i][j], &m.values[j][i], sizeof(int));
+        for (int j = 0; j < i; j++) {
+            swap(&m.values[i][j], &m.values[j][i], sizeof(int));
         }
     }
 }
@@ -133,7 +132,7 @@ void insertionSortRowsMatrixByRowCriteria(matrix m,
 
     for (int i = 1; i < m.nRows; i++) {
         int currentIndex = i;
-        while (currentIndex > 0 && rowsCriteria[i] < rowsCriteria[i - 1]) {
+        while (currentIndex > 0 && rowsCriteria[currentIndex] < rowsCriteria[currentIndex - 1]) {
             swapRows(m, currentIndex, currentIndex - 1);
             swap(&rowsCriteria[currentIndex], &rowsCriteria[currentIndex - 1], sizeof(int));
             currentIndex--;

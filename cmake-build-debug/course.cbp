@@ -8,256 +8,264 @@
 		<Option virtualFolders="CMake Files\;CMake Files\libs\;CMake Files\libs\data_structures\;CMake Files\libs\algorithms\;CMake Files\libs\tasks\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Fr/CLionProjects/course/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Fr/CLionProjects/course/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="course">
-				<Option output="C:/Users/Fr/CLionProjects/course/cmake-build-debug/course.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Fr/CLionProjects/course/cmake-build-debug"/>
+				<Option output="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/course.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/Makefile&quot;  VERBOSE=1 course"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 course"/>
+					<CompileFile command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="course/fast">
-				<Option output="C:/Users/Fr/CLionProjects/course/cmake-build-debug/course.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Fr/CLionProjects/course/cmake-build-debug"/>
+				<Option output="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/course.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/Makefile&quot;  VERBOSE=1 course/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 course/fast"/>
+					<CompileFile command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Fr/CLionProjects/course/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="data_structures">
-				<Option output="C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/data_structures/libdata_structures.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/data_structures"/>
+				<Option output="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/data_structures/libdata_structures.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/data_structures"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/data_structures/Makefile&quot;  VERBOSE=1 data_structures"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/data_structures/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/data_structures/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/data_structures/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/data_structures/Makefile&quot;  VERBOSE=1 data_structures"/>
+					<CompileFile command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/data_structures/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/data_structures/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/data_structures/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="data_structures/fast">
-				<Option output="C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/data_structures/libdata_structures.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/data_structures"/>
+				<Option output="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/data_structures/libdata_structures.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/data_structures"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/data_structures/Makefile&quot;  VERBOSE=1 data_structures/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/data_structures/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/data_structures/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/data_structures/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/data_structures/Makefile&quot;  VERBOSE=1 data_structures/fast"/>
+					<CompileFile command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/data_structures/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/data_structures/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/data_structures/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="algorithms">
-				<Option output="C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/algorithms/libalgorithms.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/algorithms"/>
+				<Option output="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/algorithms/libalgorithms.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/algorithms"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 algorithms"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 algorithms"/>
+					<CompileFile command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="algorithms/fast">
-				<Option output="C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/algorithms/libalgorithms.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/algorithms"/>
+				<Option output="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/algorithms/libalgorithms.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/algorithms"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 algorithms/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 algorithms/fast"/>
+					<CompileFile command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="tasks">
-				<Option output="C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks/libtasks.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks"/>
+				<Option output="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/tasks/libtasks.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/tasks"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks/Makefile&quot;  VERBOSE=1 tasks"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/tasks/Makefile&quot;  VERBOSE=1 tasks"/>
+					<CompileFile command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/tasks/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="tasks/fast">
-				<Option output="C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks/libtasks.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks"/>
+				<Option output="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/tasks/libtasks.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/tasks"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed"/>
-					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks/Makefile&quot;  VERBOSE=1 tasks/fast"/>
-					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Fr/CLionProjects/course/cmake-build-debug/libs/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/tasks/Makefile&quot;  VERBOSE=1 tasks/fast"/>
+					<CompileFile command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/tasks/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/tasks/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/tasks/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/algorithms/algorithm.c">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/algorithms/algorithm.c">
 			<Option target="algorithms"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/algorithms/algorithm.h">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/algorithms/algorithm.h">
 			<Option target="algorithms"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/algorithms/array/array.c">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/algorithms/array/array.c">
 			<Option target="algorithms"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/algorithms/array/array.h">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/algorithms/array/array.h">
 			<Option target="algorithms"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/data_structures/bitset/bitset.c">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/data_structures/bitset/bitset.c">
 			<Option target="data_structures"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/data_structures/bitset/bitset.h">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/data_structures/bitset/bitset.h">
 			<Option target="data_structures"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/data_structures/matrix/matrix.c">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/data_structures/matrix/matrix.c">
 			<Option target="data_structures"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/data_structures/matrix/matrix.h">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/data_structures/matrix/matrix.h">
 			<Option target="data_structures"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/data_structures/ordered_array_set/ordered_array_set.c">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/data_structures/ordered_array_set/ordered_array_set.c">
 			<Option target="data_structures"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/data_structures/ordered_array_set/ordered_array_set.h">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/data_structures/ordered_array_set/ordered_array_set.h">
 			<Option target="data_structures"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/data_structures/unordered_array_set/unordered_array_set.c">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/data_structures/unordered_array_set/unordered_array_set.c">
 			<Option target="data_structures"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/data_structures/unordered_array_set/unordered_array_set.h">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/data_structures/unordered_array_set/unordered_array_set.h">
 			<Option target="data_structures"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/data_structures/vector/vector.c">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/data_structures/vector/vector.c">
 			<Option target="data_structures"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/data_structures/vector/vector.h">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/data_structures/vector/vector.h">
 			<Option target="data_structures"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/data_structures/vector/vectorVoid.c">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/data_structures/vector/vectorVoid.c">
 			<Option target="data_structures"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/data_structures/vector/vectorVoid.h">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/data_structures/vector/vectorVoid.h">
 			<Option target="data_structures"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/tasks/tasks.c">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/tasks/tasks.c">
 			<Option target="tasks"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/tasks/tasks.h">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/tasks/tasks.h">
 			<Option target="tasks"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/tasks/tests.c">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/tasks/tests.c">
 			<Option target="tasks"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/tasks/tests.h">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/tasks/tests.h">
 			<Option target="tasks"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/main.c">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/main.c">
 			<Option target="course"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/CMakeLists.txt">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/CMakeLists.txt">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\libs\"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/data_structures/CMakeLists.txt">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/data_structures/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\libs\data_structures\"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/algorithms/CMakeLists.txt">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/algorithms/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\libs\algorithms\"/>
 		</Unit>
-		<Unit filename="C:/Users/Fr/CLionProjects/course/libs/tasks/CMakeLists.txt">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/tasks/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\libs\tasks\"/>
 		</Unit>
 	</Project>
