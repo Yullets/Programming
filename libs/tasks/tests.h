@@ -37,6 +37,8 @@ void test_countEqClassesByRowsSum();
 
 void test_getNSpecialElement();
 
+void test_swapPenultimateRow();
+
 void tests();
 
 #endif //COURSE_TESTS_H

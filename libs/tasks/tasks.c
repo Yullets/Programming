@@ -248,7 +248,7 @@ int getNSpecialElement(matrix m) {
 
     int count = 0;
     for (int i = 0; i < m.nRows; i++) {
-        for(int j = 0; j < m.nCols; j++)
+        for (int j = 0; j < m.nCols; j++)
             if (m.values[i][j] > sum[j] - m.values[i][j])
                 count++;
     }
@@ -256,3 +256,30 @@ int getNSpecialElement(matrix m) {
     free(sum);
     free(col);
 }
+
+position getLeftMin(matrix m) {
+    position min = {0, 0};
+    for (int i = 0; i < m.nRows; i++) {
+        for (int j = 0; j < m.nCols; j++) {
+            position pos = {i, j};
+            if (m.values[i][j] < m.values[min.rowIndex][min.colIndex] ||
+                m.values[i][j] == m.values[min.rowIndex][min.colIndex] && j < min.colIndex)
+                min = pos;
+        }
+    }
+
+    return min;
+}
+
+void swapPenultimateRow(matrix m) {
+    position min = getLeftMin(m);
+    int *col = (int *) malloc(sizeof(int) * m.nRows);
+    for (int i = 0; i < m.nRows; i++)
+        col[i] = m.values[i][min.colIndex];
+
+    memcpy(m.values[m.nRows - 2], col, sizeof(int) * m.nCols);
+    free(col);
+}
+
+
+

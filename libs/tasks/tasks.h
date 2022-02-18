@@ -72,4 +72,11 @@ int countEqClassesByRowsSum(matrix m);
 //возвращает кол-во особых элементов матрицы.
 int getNSpecialElement(matrix m);
 
+//возвращает позицию минимального левого элемента.
+position getLeftMin(matrix m);
+
+//вставляет на предпоследнюю строку столбец с минимальным
+//левым элементом.
+void swapPenultimateRow(matrix m);
+
 #endif //COURSE_TASKS_H
