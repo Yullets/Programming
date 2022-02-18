@@ -7,6 +7,8 @@
 #include <malloc.h>
 #include <assert.h>
 #include <math.h>
+#include <stdlib.h>
+
 #include "../algorithms/algorithm.h"
 #include "../data_structures/matrix/matrix.h"
 #include "tasks.h"
@@ -171,16 +173,16 @@ int getMinInArea(matrix m) {
     return minValue;
 }
 
-float getDistance(int *a, int n){
+float getDistance(int *a, int n) {
     int sum = 0;
-    for(int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
         sum += a[i] * a[i];
 
     return sqrt(sum);
 }
 
 void insertionSortRowsMatrixByRowCriteriaF(matrix m,
-                                          float(*criteria)(int *, int)) {
+                                           float(*criteria)(int *, int)) {
     float *rowsCriteria = (float *) malloc(sizeof(float) * m.nRows);
 
     for (int i = 0; i < m.nRows; i++)
@@ -198,7 +200,38 @@ void insertionSortRowsMatrixByRowCriteriaF(matrix m,
     free(rowsCriteria);
 }
 
-void sortByDistances(matrix m){
+void sortByDistances(matrix m) {
     insertionSortRowsMatrixByRowCriteriaF(m, getDistance);
 }
 
+int cmp_long_long(const void *pa, const void *pb) {
+    long long arg1 = *(const long long *) pa;
+    long long arg2 = *(const long long *) pb;
+    if (arg1 < arg2)
+        return -1;
+    if (arg1 > arg2)
+        return 1;
+    return 0;
+}
+
+int countNUnique(long long *a, int n) {
+    qsort(a, n, sizeof(long long), cmp_long_long);
+    int unique = 1;
+    for (int i = 1; i < n; i++) {
+        if (a[i] != a[i - 1])
+            unique++;
+    }
+
+    return unique;
+}
+
+int countEqClassesByRowsSum(matrix m) {
+    long long *a = (long long *) malloc(sizeof(long long) * m.nRows);
+    for (int i = 0; i < m.nRows; i++) {
+        a[i] = getSum(m.values[i], m.nCols);
+    }
+    int res = countNUnique(a, m.nRows);
+    free(a);
+
+    return res;
+}

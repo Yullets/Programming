@@ -61,4 +61,12 @@ void insertionSortRowsMatrixByRowCriteriaF(matrix m,
 //сортирует массив по расстоянию между координатами.
 void sortByDistances(matrix m);
 
+int cmp_long_long(const void *pa, const void *pb);
+
+//возвращает кол-во уникальных элементов.
+int countNUnique(long long *a, int n);
+
+//возвращает кол-во уникальных классов матриц.
+int countEqClassesByRowsSum(matrix m);
+
 #endif //COURSE_TASKS_H

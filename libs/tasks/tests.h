@@ -33,6 +33,8 @@ void test_getMinInArea();
 
 void test_sortByDistances();
 
+void test_countEqClassesByRowsSum();
+
 void tests();
 
 #endif //COURSE_TESTS_H
