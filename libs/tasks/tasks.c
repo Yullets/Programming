@@ -235,3 +235,24 @@ int countEqClassesByRowsSum(matrix m) {
 
     return res;
 }
+
+int getNSpecialElement(matrix m) {
+    int *sum = (int *) malloc(sizeof(int) * m.nRows);
+    int *col = (int *) malloc(sizeof(int) * m.nRows);
+
+    for (int i = 0; i < m.nCols; i++) {
+        for (int j = 0; j < m.nRows; j++)
+            col[j] = m.values[j][i];
+        sum[i] = getSum(col, m.nRows);
+    }
+
+    int count = 0;
+    for (int i = 0; i < m.nRows; i++) {
+        for(int j = 0; j < m.nCols; j++)
+            if (m.values[i][j] > sum[j] - m.values[i][j])
+                count++;
+    }
+
+    free(sum);
+    free(col);
+}

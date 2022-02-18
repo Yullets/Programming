@@ -35,6 +35,8 @@ void test_sortByDistances();
 
 void test_countEqClassesByRowsSum();
 
+void test_getNSpecialElement();
+
 void tests();
 
 #endif //COURSE_TESTS_H

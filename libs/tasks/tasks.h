@@ -69,4 +69,7 @@ int countNUnique(long long *a, int n);
 //возвращает кол-во уникальных классов матриц.
 int countEqClassesByRowsSum(matrix m);
 
+//возвращает кол-во особых элементов матрицы.
+int getNSpecialElement(matrix m);
+
 #endif //COURSE_TASKS_H
