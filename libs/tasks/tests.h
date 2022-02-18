@@ -31,6 +31,8 @@ void test_findSumOfMaxesOfPseudoDiagonal();
 
 void test_getMinInArea();
 
+void test_sortByDistances();
+
 void tests();
 
 #endif //COURSE_TESTS_H

@@ -6,6 +6,7 @@
 #include <stdbool.h>
 #include <malloc.h>
 #include <assert.h>
+#include <math.h>
 #include "../algorithms/algorithm.h"
 #include "../data_structures/matrix/matrix.h"
 #include "tasks.h"
@@ -169,3 +170,35 @@ int getMinInArea(matrix m) {
 
     return minValue;
 }
+
+float getDistance(int *a, int n){
+    int sum = 0;
+    for(int i = 0; i < n; i++)
+        sum += a[i] * a[i];
+
+    return sqrt(sum);
+}
+
+void insertionSortRowsMatrixByRowCriteriaF(matrix m,
+                                          float(*criteria)(int *, int)) {
+    float *rowsCriteria = (float *) malloc(sizeof(float) * m.nRows);
+
+    for (int i = 0; i < m.nRows; i++)
+        rowsCriteria[i] = criteria(m.values[i], m.nCols);
+
+    for (int i = 1; i < m.nRows; i++) {
+        int currentIndex = i;
+        while (currentIndex > 0 && rowsCriteria[currentIndex] < rowsCriteria[currentIndex - 1]) {
+            swapRows(m, currentIndex, currentIndex - 1);
+            swap(&rowsCriteria[currentIndex], &rowsCriteria[currentIndex - 1], sizeof(int));
+            currentIndex--;
+        }
+    }
+
+    free(rowsCriteria);
+}
+
+void sortByDistances(matrix m){
+    insertionSortRowsMatrixByRowCriteriaF(m, getDistance);
+}
+

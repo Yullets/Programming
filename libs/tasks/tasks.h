@@ -51,4 +51,14 @@ int min(int a, int b);
 //возвращает минимальное значение из выделенной территории.
 int getMinInArea(matrix m);
 
+//возвращает расстояния между координатами.
+float getDistance(int *a, int n);
+
+//сортирует массив по критерию.
+void insertionSortRowsMatrixByRowCriteriaF(matrix m,
+                                           float(*criteria)(int *, int));
+
+//сортирует массив по расстоянию между координатами.
+void sortByDistances(matrix m);
+
 #endif //COURSE_TASKS_H
