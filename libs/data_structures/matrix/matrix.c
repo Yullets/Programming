@@ -31,7 +31,7 @@ void freeMemMatrix(matrix *m) {
 
 void freeMemMatrices(matrix *ms, int nMatrices) {
     for (int i = 0; i < nMatrices; i++)
-        free(ms->values[i]);
+        freeMemMatrix(ms);
     free(ms->values);
 }
 

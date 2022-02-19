@@ -79,4 +79,15 @@ position getLeftMin(matrix m);
 //левым элементом.
 void swapPenultimateRow(matrix m);
 
+//возвращает значение 'истина', если массив упорядочен по неубыванию,
+//иначе - 'ложь'.
+bool isNonDescendingSorted(int *a, int n);
+
+//возвращает значение 'истина', если строки матрицы упорядочены по неубыванию,
+//иначе - 'ложь'.
+bool hasAllNonDescendingRows(matrix m);
+
+//возвращает кол-во матриц, упорядоченных по неубыванию.
+int countNonDescendingRowsMatrices(matrix *ms, int nMatrix);
+
 #endif //COURSE_TASKS_H

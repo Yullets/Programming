@@ -39,6 +39,10 @@ void test_getNSpecialElement();
 
 void test_swapPenultimateRow();
 
+void test_countNonDescendingRowsMatrices1();
+
+void test_countNonDescendingRowsMatrices2();
+
 void tests();
 
 #endif //COURSE_TESTS_H
