@@ -323,14 +323,14 @@ int countZeroRows(matrix m) {
     for (int i = 0; i < m.nRows; i++) {
         int res = countValues(m.values[i], m.nCols, 0);
         if (res == m.nCols)
-        count++;
+            count++;
     }
 
     return count;
 }
 
 void printMatrixWithMaxZeroRows(matrix *ms, int nMatrix) {
-    int *a = (int*) malloc(sizeof(int) * nMatrix);
+    int *a = (int *) malloc(sizeof(int) * nMatrix);
     int max = 0;
     for (int i = 0; i < nMatrix; i++) {
         int countOfZeroRows = countZeroRows(ms[i]);
@@ -340,6 +340,36 @@ void printMatrixWithMaxZeroRows(matrix *ms, int nMatrix) {
 
     for (int i = 0; i < nMatrix; i++) {
         if (a[i] == max)
+            outputMatrix(ms[i]);
+    }
+
+    free(a);
+}
+
+int linearSearchMin(const int *a, int n) {
+    int min = a[0];
+    for (int i = 1; i < n; i++) {
+        if (a[i] < min)
+            min = a[i];
+    }
+
+    return min;
+}
+
+void printMatrixWithMinNorm(matrix *ms, int nMatrix) {
+    int *a = (int *) malloc(sizeof(int) * nMatrix);
+    for (int i = 0; i < nMatrix; i++) {
+        position maxPos = getMaxValuePos(ms[i]);
+        position minPos = getMinValuePos(ms[i]);
+
+        int max = max2(abs(ms[i].values[maxPos.rowIndex][maxPos.colIndex]),
+                       abs(ms[i].values[minPos.rowIndex][minPos.colIndex]));
+        a[i] = max;
+    }
+
+    int minNorm = linearSearchMin(a, nMatrix);
+    for(int i = 0; i < nMatrix; i++) {
+        if (a[i] == minNorm)
             outputMatrix(ms[i]);
     }
 

@@ -99,4 +99,10 @@ int countZeroRows(matrix m);
 //выводит матрицу с наибольшим кол-вом нулевых строк.
 void printMatrixWithMaxZeroRows(matrix *ms, int nMatrix);
 
+//возвращает значение минимального элемента.
+int linearSearchMin(const int *a, int n);
+
+//выводит матрицу с наименьшей нормой.
+void printMatrixWithMinNorm(matrix *ms, int nMatrix)ж
+
 #endif //COURSE_TASKS_H
