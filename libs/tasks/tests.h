@@ -43,6 +43,10 @@ void test_countNonDescendingRowsMatrices1();
 
 void test_countNonDescendingRowsMatrices2();
 
+void test_countZeroRows1();
+
+void test_countZeroRows2();
+
 void tests();
 
 #endif //COURSE_TESTS_H

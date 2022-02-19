@@ -371,18 +371,19 @@ void test_swapPenultimateRow() {
 void test_countNonDescendingRowsMatrices1() {
     matrix *ms = createArrayOfMatrixFromArray(
             (int[]) {
-                7, 1,
-                1, 1,
-                1, 6,
-                2, 2,
-                5, 4,
-                1, 2,
-                1, 3,
-                7, 9,
+                    7, 1,
+                    1, 1,
+                    1, 6,
+                    2, 2,
+                    5, 4,
+                    1, 2,
+                    1, 3,
+                    7, 9,
             },
             4, 2, 2);
     int count = countNonDescendingRowsMatrices(ms, 4);
-    assert(count == 2);
+    int expectedRes = 2;
+    assert(count == expectedRes);
     freeMemMatrices(ms, 4);
 }
 
@@ -400,8 +401,37 @@ void test_countNonDescendingRowsMatrices2() {
             },
             4, 2, 2);
     int count = countNonDescendingRowsMatrices(ms, 4);
-    assert(count == 3);
+    int expectedRes = 3;
+    assert(count == expectedRes);
     freeMemMatrices(ms, 4);
+}
+
+void test_countZeroRows1() {
+    matrix m = createMatrixFromArray(
+            (int[]) {
+                    0, 0, 0,
+                    2, 3, 6,
+                    12, 2, 1,
+            },
+            3, 3);
+    int res = countZeroRows(m);
+    int expectedRes = 1;
+    assert(res == expectedRes);
+    freeMemMatrix(&m);
+}
+
+void test_countZeroRows2() {
+    matrix m = createMatrixFromArray(
+            (int[]) {
+                    0, 0, 0,
+                    0, 0, 0,
+                    0, 0, 0,
+            },
+            3, 3);
+    int res = countZeroRows(m);
+    int expectedRes = 3;
+    assert(res == expectedRes);
+    freeMemMatrix(&m);
 }
 
 void tests() {
@@ -424,4 +454,6 @@ void tests() {
     test_swapPenultimateRow();
     test_countNonDescendingRowsMatrices1();
     test_countNonDescendingRowsMatrices2();
+    test_countZeroRows1();
+    test_countZeroRows2();
 }
