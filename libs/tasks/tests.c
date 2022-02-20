@@ -434,6 +434,20 @@ void test_countZeroRows2() {
     freeMemMatrix(&m);
 }
 
+void test_getNSpecialElement2() {
+    matrix m = createMatrixFromArray(
+            (int[]) {
+                    2, 3, 5, 5, 4,
+                    6, 2, 3, 8, 12,
+                    12, 12, 2, 1, 2,
+            },
+            3, 5);
+    int count = getNSpecialElement2(m);
+    int expectedCount = 4;
+    assert(count == expectedCount);
+    freeMemMatrix(&m);
+}
+
 void tests() {
     test_changeRowsWithMinAndMaxEl1();
     test_changeRowsWithMinAndMaxEl2();
@@ -456,4 +470,5 @@ void tests() {
     test_countNonDescendingRowsMatrices2();
     test_countZeroRows1();
     test_countZeroRows2();
+    test_getNSpecialElement2();
 }

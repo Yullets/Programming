@@ -47,6 +47,8 @@ void test_countZeroRows1();
 
 void test_countZeroRows2();
 
+void test_getNSpecialElement2();
+
 void tests();
 
 #endif //COURSE_TESTS_H

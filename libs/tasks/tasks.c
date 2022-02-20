@@ -368,10 +368,43 @@ void printMatrixWithMinNorm(matrix *ms, int nMatrix) {
     }
 
     int minNorm = linearSearchMin(a, nMatrix);
-    for(int i = 0; i < nMatrix; i++) {
+    for (int i = 0; i < nMatrix; i++) {
         if (a[i] == minNorm)
             outputMatrix(ms[i]);
     }
 
     free(a);
+}
+
+int getNSpecialElement2(matrix m) {
+    int count = 0;
+
+    for (int i = 0; i < m.nRows; i++) {
+        for (int j = 0; j < m.nCols; j++) {
+            bool left = false;
+            if (j == 0)
+                left = true;
+
+            if (!left) {
+                int max = getMax(m.values[i], j);
+                if (max < m.values[i][j])
+                    left = true;
+            }
+
+            bool right = false;
+            if (m.nCols - 1 == j)
+                right = true;
+
+            if(!right) {
+                int min = getMin(m.values[i] + j + 1, m.nCols - j - 1);
+                if (min > m.values[i][j])
+                    right = true;
+            }
+
+            if(left && right)
+                count++;
+        }
+    }
+
+    return count;
 }

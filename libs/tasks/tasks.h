@@ -103,6 +103,9 @@ void printMatrixWithMaxZeroRows(matrix *ms, int nMatrix);
 int linearSearchMin(const int *a, int n);
 
 //выводит матрицу с наименьшей нормой.
-void printMatrixWithMinNorm(matrix *ms, int nMatrix)ж
+void printMatrixWithMinNorm(matrix *ms, int nMatrix);
+
+//возвращает кол-во особых элементов в матрице.
+int getNSpecialElement2(matrix m);
 
 #endif //COURSE_TASKS_H
