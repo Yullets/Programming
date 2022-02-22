@@ -395,16 +395,58 @@ int getNSpecialElement2(matrix m) {
             if (m.nCols - 1 == j)
                 right = true;
 
-            if(!right) {
+            if (!right) {
                 int min = getMin(m.values[i] + j + 1, m.nCols - j - 1);
                 if (min > m.values[i][j])
                     right = true;
             }
 
-            if(left && right)
+            if (left && right)
                 count++;
         }
     }
 
     return count;
+}
+
+long long getScalarProduct(int *a, int *b, int n) {
+    long long product = 0;
+    for (int i = 0; i < n; i++)
+        product += a[i] * b[i];
+
+    return product;
+}
+
+
+double getVectorLength(int *a, int n) {
+    long long sumSquares = 0;
+    for (int i = 0; i < n; i++)
+        sumSquares += a[i] * a[i];
+
+    return sqrt(sumSquares);
+}
+
+double getCosine(int *a, int *b, int n) {
+    double aLength = getVectorLength(a, n);
+    double bLength = getVectorLength(b, n);
+
+    long long scalarProduct = getScalarProduct(a, b, n);
+
+    return scalarProduct / (aLength * bLength);
+}
+
+
+int getVectorIndexWithMaxAngle(matrix m, int *b) {
+    int minIndex = 0;
+    double minCos = getCosine(m.values[0], b, m.nCols);
+
+    for (int i = 1; i < m.nRows; i++) {
+        double cos = getCosine(m.values[i], b, m.nCols);
+        if (cos < minCos) {
+            minIndex = i;
+            minCos = cos;
+        }
+    }
+
+    return minIndex;
 }

@@ -7,7 +7,7 @@
 
 //меняет местами строки, где находятся максимальный и
 //минимальный элементы.
-void changeRowsWithMinAndMaxEl (matrix m);
+void changeRowsWithMinAndMaxEl(matrix m);
 
 //возвращает максимальное значение элементов строки.
 int getMax(const int *a, int n);
@@ -107,5 +107,11 @@ void printMatrixWithMinNorm(matrix *ms, int nMatrix);
 
 //возвращает кол-во особых элементов в матрице.
 int getNSpecialElement2(matrix m);
+
+double getVectorLength(int *a, int n);
+
+int getVectorIndexWithMaxAngle(matrix m, int *b);
+
+double getCosine(int *a, int *b, int n);
 
 #endif //COURSE_TASKS_H

@@ -448,6 +448,27 @@ void test_getNSpecialElement2() {
     freeMemMatrix(&m);
 }
 
+void test_getVectorIndexWithMaxAngle() {
+    matrix m = createMatrixFromArray(
+            (int[]) {
+                4, 5, 6,
+                7, 8, 9,
+                1, 2, 3,
+             },
+            3, 3);
+
+    int v[] = {
+            2, 2, 2
+    };
+
+    int expectedIndex = 2;
+    int index = getVectorIndexWithMaxAngle(m, v);
+
+    assert(expectedIndex == index);
+
+    freeMemMatrix(&m);
+}
+
 void tests() {
     test_changeRowsWithMinAndMaxEl1();
     test_changeRowsWithMinAndMaxEl2();
@@ -471,4 +492,5 @@ void tests() {
     test_countZeroRows1();
     test_countZeroRows2();
     test_getNSpecialElement2();
+    test_getVectorIndexWithMaxAngle();
 }
