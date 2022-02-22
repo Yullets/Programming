@@ -51,6 +51,8 @@ void test_getNSpecialElement2();
 
 void test_getVectorIndexWithMaxAngle();
 
+void test_getSpecialScalarProduct();
+
 void tests();
 
 #endif //COURSE_TESTS_H

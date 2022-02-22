@@ -108,10 +108,23 @@ void printMatrixWithMinNorm(matrix *ms, int nMatrix);
 //возвращает кол-во особых элементов в матрице.
 int getNSpecialElement2(matrix m);
 
+//возвращает скалярное произведение
+long long int getScalarProduct(int *a, int *b, int n);
+
+//возвращает длину вектора.
 double getVectorLength(int *a, int n);
 
+//возвращает косинус угла между векторами.
+double getCosine(int *a, int *b, int n);
+
+//возвращает индекс вектора с максимальным углом.
 int getVectorIndexWithMaxAngle(matrix m, int *b);
 
-double getCosine(int *a, int *b, int n);
+//возвращает скалярное произведение строк и столбуов.
+long long getScalarProductRowAndCol(matrix m, int i, int j);
+
+//возвращает скалярное произведение строки, в которой находится
+//наибольший элемент матрицы, на столбец с наименьшим элементом.
+long long getSpecialScalarProduct(matrix m);
 
 #endif //COURSE_TASKS_H

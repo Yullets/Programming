@@ -450,3 +450,23 @@ int getVectorIndexWithMaxAngle(matrix m, int *b) {
 
     return minIndex;
 }
+
+long long getScalarProductRowAndCol(matrix m, int i, int j) {
+    int *col = (int *) malloc(sizeof(int) * m.nRows);
+
+    for (int k = 0; k < m.nRows; k++)
+        col[k] = m.values[k][j];
+
+    long long res = getScalarProduct(m.values[i], col, m.nCols);
+
+    free(col);
+
+    return res;
+}
+
+long long getSpecialScalarProduct(matrix m) {
+    position maxPosRow = getMaxValuePos(m);
+    position minPosCol = getMinValuePos(m);
+
+    return getScalarProductRowAndCol(m, maxPosRow.rowIndex, minPosCol.colIndex);
+}
