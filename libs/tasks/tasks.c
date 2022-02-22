@@ -255,6 +255,8 @@ int getNSpecialElement(matrix m) {
 
     free(sum);
     free(col);
+
+    return count;
 }
 
 position getLeftMin(matrix m) {
