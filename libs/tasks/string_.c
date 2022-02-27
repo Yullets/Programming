@@ -4,20 +4,50 @@
 
 #include <string.h>
 #include <stdio.h>
-#include <stdbool.h>
-#include <malloc.h>
 #include <assert.h>
-#include <math.h>
-#include <stdlib.h>
+#include "string_.h"
+#include <ctype.h>
 
-#include "../algorithms/algorithm.h"
-#include "../data_structures/matrix/matrix.h"
-#include "../algorithms/array/array.h"
 
-size_t strlen_ ( char *begin) {
+size_t strlen_(char *begin) {
     char *end = begin;
     while (*end != '\0')
         end++;
 
     return end - begin;
+}
+
+char *find(char *begin, char *end, int ch) {
+    while (begin != end && *begin != ch)
+        begin++;
+
+    return begin;
+}
+
+char *findNonSpace(char *begin) {
+    while (isspace(*begin) && *begin != '\0')
+        begin++;
+
+    return begin;
+}
+
+char *findSpace(char *begin) {
+    while (!isspace(*begin) && *begin != '\0')
+        begin++;
+
+    return begin;
+}
+
+char* findNonSpaceReverse(char *rbegin, const char *rend){
+    while (rbegin > rend && isspace(*rbegin))
+        rbegin--;
+
+    return rbegin;
+}
+
+char* findSpaceReverse(char *rbegin, const char *rend) {
+    while (rbegin > rend && !isspace(*rbegin))
+        rbegin--;
+
+    return rbegin;
 }
