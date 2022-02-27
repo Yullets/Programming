@@ -37,4 +37,8 @@ char* findNonSpaceReverse(char *rbegin, const char *rend);
 //начиная с rbegin и заканчивая rend. Если символ не найден, возвращается адрес rend.
 char* findSpaceReverse(char *rbegin, const char *rend);
 
+//возвращает отрицательное значение, если lhs располагается до rhs,
+//значение 0, если lhs и rhs равны, иначе – положительное значение.
+int strcmp (const char *lhs, const char *rhs);
+
 #endif //COURSE_STRING__H

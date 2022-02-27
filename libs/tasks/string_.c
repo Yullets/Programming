@@ -2,7 +2,7 @@
 // Created by Yulia on 26.02.2022.
 //
 
-#include <string.h>
+//#include <string.h>
 #include <stdio.h>
 #include <assert.h>
 #include "string_.h"
@@ -50,4 +50,11 @@ char* findSpaceReverse(char *rbegin, const char *rend) {
         rbegin--;
 
     return rbegin;
+}
+
+int strcmp (const char *lhs, const char *rhs) {
+    while (*lhs != '\0' && (*lhs == *rhs))
+        lhs++, rhs++;
+
+    return *lhs - *rhs;
 }
