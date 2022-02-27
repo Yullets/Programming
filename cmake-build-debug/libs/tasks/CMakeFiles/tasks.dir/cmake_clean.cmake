@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/tasks.dir/string_.c.obj"
+  "CMakeFiles/tasks.dir/string_.c.obj.d"
   "CMakeFiles/tasks.dir/tasks.c.obj"
   "CMakeFiles/tasks.dir/tasks.c.obj.d"
   "CMakeFiles/tasks.dir/tests.c.obj"

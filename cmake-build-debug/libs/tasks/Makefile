@@ -129,6 +129,30 @@ tasks/fast:
 	cd /d C:\Users\Yulia\CLionProjects\Programming\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\tasks\CMakeFiles\tasks.dir\build.make libs/tasks/CMakeFiles/tasks.dir/build
 .PHONY : tasks/fast
 
+string_.obj: string_.c.obj
+.PHONY : string_.obj
+
+# target to build an object file
+string_.c.obj:
+	cd /d C:\Users\Yulia\CLionProjects\Programming\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\tasks\CMakeFiles\tasks.dir\build.make libs/tasks/CMakeFiles/tasks.dir/string_.c.obj
+.PHONY : string_.c.obj
+
+string_.i: string_.c.i
+.PHONY : string_.i
+
+# target to preprocess a source file
+string_.c.i:
+	cd /d C:\Users\Yulia\CLionProjects\Programming\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\tasks\CMakeFiles\tasks.dir\build.make libs/tasks/CMakeFiles/tasks.dir/string_.c.i
+.PHONY : string_.c.i
+
+string_.s: string_.c.s
+.PHONY : string_.s
+
+# target to generate assembly for a file
+string_.c.s:
+	cd /d C:\Users\Yulia\CLionProjects\Programming\cmake-build-debug && $(MAKE) $(MAKESILENT) -f libs\tasks\CMakeFiles\tasks.dir\build.make libs/tasks/CMakeFiles/tasks.dir/string_.c.s
+.PHONY : string_.c.s
+
 tasks.obj: tasks.c.obj
 .PHONY : tasks.obj
 
@@ -186,6 +210,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... tasks
+	@echo ... string_.obj
+	@echo ... string_.i
+	@echo ... string_.s
 	@echo ... tasks.obj
 	@echo ... tasks.i
 	@echo ... tasks.s

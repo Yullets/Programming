@@ -238,6 +238,12 @@
 		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/data_structures/vector/vectorVoid.h">
 			<Option target="data_structures"/>
 		</Unit>
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/tasks/string_.c">
+			<Option target="tasks"/>
+		</Unit>
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/tasks/string_.h">
+			<Option target="tasks"/>
+		</Unit>
 		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/tasks/tasks.c">
 			<Option target="tasks"/>
 		</Unit>
