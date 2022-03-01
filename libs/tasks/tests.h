@@ -53,12 +53,4 @@ void test_getVectorIndexWithMaxAngle();
 
 void test_getSpecialScalarProduct();
 
-void assertString(const char *expected, char *got,
-                  char const *fileName, char const *funcName,
-                  int line);
-
-void test_removeNonLetters();
-
-void tests();
-
 #endif //COURSE_TESTS_H

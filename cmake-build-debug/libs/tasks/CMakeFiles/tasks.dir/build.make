@@ -96,35 +96,51 @@ libs/tasks/CMakeFiles/tasks.dir/tests.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tasks.dir/tests.c.s"
 	cd /d C:\Users\Yulia\CLionProjects\Programming\cmake-build-debug\libs\tasks && "D:\Studing programs\CLion 2021.3.3\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Yulia\CLionProjects\Programming\libs\tasks\tests.c -o CMakeFiles\tasks.dir\tests.c.s
 
-libs/tasks/CMakeFiles/tasks.dir/string_.c.obj: libs/tasks/CMakeFiles/tasks.dir/flags.make
-libs/tasks/CMakeFiles/tasks.dir/string_.c.obj: ../libs/tasks/string_.c
-libs/tasks/CMakeFiles/tasks.dir/string_.c.obj: libs/tasks/CMakeFiles/tasks.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Yulia\CLionProjects\Programming\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object libs/tasks/CMakeFiles/tasks.dir/string_.c.obj"
-	cd /d C:\Users\Yulia\CLionProjects\Programming\cmake-build-debug\libs\tasks && "D:\Studing programs\CLion 2021.3.3\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libs/tasks/CMakeFiles/tasks.dir/string_.c.obj -MF CMakeFiles\tasks.dir\string_.c.obj.d -o CMakeFiles\tasks.dir\string_.c.obj -c C:\Users\Yulia\CLionProjects\Programming\libs\tasks\string_.c
+libs/tasks/CMakeFiles/tasks.dir/stringTasks.c.obj: libs/tasks/CMakeFiles/tasks.dir/flags.make
+libs/tasks/CMakeFiles/tasks.dir/stringTasks.c.obj: ../libs/tasks/stringTasks.c
+libs/tasks/CMakeFiles/tasks.dir/stringTasks.c.obj: libs/tasks/CMakeFiles/tasks.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Yulia\CLionProjects\Programming\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object libs/tasks/CMakeFiles/tasks.dir/stringTasks.c.obj"
+	cd /d C:\Users\Yulia\CLionProjects\Programming\cmake-build-debug\libs\tasks && "D:\Studing programs\CLion 2021.3.3\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libs/tasks/CMakeFiles/tasks.dir/stringTasks.c.obj -MF CMakeFiles\tasks.dir\stringTasks.c.obj.d -o CMakeFiles\tasks.dir\stringTasks.c.obj -c C:\Users\Yulia\CLionProjects\Programming\libs\tasks\stringTasks.c
 
-libs/tasks/CMakeFiles/tasks.dir/string_.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tasks.dir/string_.c.i"
-	cd /d C:\Users\Yulia\CLionProjects\Programming\cmake-build-debug\libs\tasks && "D:\Studing programs\CLion 2021.3.3\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Yulia\CLionProjects\Programming\libs\tasks\string_.c > CMakeFiles\tasks.dir\string_.c.i
+libs/tasks/CMakeFiles/tasks.dir/stringTasks.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tasks.dir/stringTasks.c.i"
+	cd /d C:\Users\Yulia\CLionProjects\Programming\cmake-build-debug\libs\tasks && "D:\Studing programs\CLion 2021.3.3\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Yulia\CLionProjects\Programming\libs\tasks\stringTasks.c > CMakeFiles\tasks.dir\stringTasks.c.i
 
-libs/tasks/CMakeFiles/tasks.dir/string_.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tasks.dir/string_.c.s"
-	cd /d C:\Users\Yulia\CLionProjects\Programming\cmake-build-debug\libs\tasks && "D:\Studing programs\CLion 2021.3.3\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Yulia\CLionProjects\Programming\libs\tasks\string_.c -o CMakeFiles\tasks.dir\string_.c.s
+libs/tasks/CMakeFiles/tasks.dir/stringTasks.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tasks.dir/stringTasks.c.s"
+	cd /d C:\Users\Yulia\CLionProjects\Programming\cmake-build-debug\libs\tasks && "D:\Studing programs\CLion 2021.3.3\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Yulia\CLionProjects\Programming\libs\tasks\stringTasks.c -o CMakeFiles\tasks.dir\stringTasks.c.s
+
+libs/tasks/CMakeFiles/tasks.dir/stringTests.c.obj: libs/tasks/CMakeFiles/tasks.dir/flags.make
+libs/tasks/CMakeFiles/tasks.dir/stringTests.c.obj: ../libs/tasks/stringTests.c
+libs/tasks/CMakeFiles/tasks.dir/stringTests.c.obj: libs/tasks/CMakeFiles/tasks.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Yulia\CLionProjects\Programming\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object libs/tasks/CMakeFiles/tasks.dir/stringTests.c.obj"
+	cd /d C:\Users\Yulia\CLionProjects\Programming\cmake-build-debug\libs\tasks && "D:\Studing programs\CLion 2021.3.3\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT libs/tasks/CMakeFiles/tasks.dir/stringTests.c.obj -MF CMakeFiles\tasks.dir\stringTests.c.obj.d -o CMakeFiles\tasks.dir\stringTests.c.obj -c C:\Users\Yulia\CLionProjects\Programming\libs\tasks\stringTests.c
+
+libs/tasks/CMakeFiles/tasks.dir/stringTests.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/tasks.dir/stringTests.c.i"
+	cd /d C:\Users\Yulia\CLionProjects\Programming\cmake-build-debug\libs\tasks && "D:\Studing programs\CLion 2021.3.3\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Yulia\CLionProjects\Programming\libs\tasks\stringTests.c > CMakeFiles\tasks.dir\stringTests.c.i
+
+libs/tasks/CMakeFiles/tasks.dir/stringTests.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/tasks.dir/stringTests.c.s"
+	cd /d C:\Users\Yulia\CLionProjects\Programming\cmake-build-debug\libs\tasks && "D:\Studing programs\CLion 2021.3.3\bin\mingw\bin\gcc.exe" $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Yulia\CLionProjects\Programming\libs\tasks\stringTests.c -o CMakeFiles\tasks.dir\stringTests.c.s
 
 # Object files for target tasks
 tasks_OBJECTS = \
 "CMakeFiles/tasks.dir/tasks.c.obj" \
 "CMakeFiles/tasks.dir/tests.c.obj" \
-"CMakeFiles/tasks.dir/string_.c.obj"
+"CMakeFiles/tasks.dir/stringTasks.c.obj" \
+"CMakeFiles/tasks.dir/stringTests.c.obj"
 
 # External object files for target tasks
 tasks_EXTERNAL_OBJECTS =
 
 libs/tasks/libtasks.a: libs/tasks/CMakeFiles/tasks.dir/tasks.c.obj
 libs/tasks/libtasks.a: libs/tasks/CMakeFiles/tasks.dir/tests.c.obj
-libs/tasks/libtasks.a: libs/tasks/CMakeFiles/tasks.dir/string_.c.obj
+libs/tasks/libtasks.a: libs/tasks/CMakeFiles/tasks.dir/stringTasks.c.obj
+libs/tasks/libtasks.a: libs/tasks/CMakeFiles/tasks.dir/stringTests.c.obj
 libs/tasks/libtasks.a: libs/tasks/CMakeFiles/tasks.dir/build.make
 libs/tasks/libtasks.a: libs/tasks/CMakeFiles/tasks.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Yulia\CLionProjects\Programming\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C static library libtasks.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Yulia\CLionProjects\Programming\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C static library libtasks.a"
 	cd /d C:\Users\Yulia\CLionProjects\Programming\cmake-build-debug\libs\tasks && $(CMAKE_COMMAND) -P CMakeFiles\tasks.dir\cmake_clean_target.cmake
 	cd /d C:\Users\Yulia\CLionProjects\Programming\cmake-build-debug\libs\tasks && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\tasks.dir\link.txt --verbose=$(VERBOSE)
 

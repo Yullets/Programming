@@ -1,0 +1,2 @@
+"D:\Studing programs\CLion 2021.3.3\bin\mingw\bin\ar.exe" qc libstring_.a CMakeFiles/string_.dir/string_.c.obj
+"D:\Studing programs\CLion 2021.3.3\bin\mingw\bin\ranlib.exe" libstring_.a

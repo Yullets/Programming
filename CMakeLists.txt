@@ -10,3 +10,4 @@ add_subdirectory(libs)
 target_link_libraries(course data_structures)
 target_link_libraries(course algorithms)
 target_link_libraries(course tasks)
+

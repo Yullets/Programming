@@ -1,2 +1,2 @@
-"D:\Studing programs\CLion 2021.3.3\bin\mingw\bin\ar.exe" qc libtasks.a CMakeFiles/tasks.dir/tasks.c.obj CMakeFiles/tasks.dir/tests.c.obj CMakeFiles/tasks.dir/string_.c.obj
+"D:\Studing programs\CLion 2021.3.3\bin\mingw\bin\ar.exe" qc libtasks.a CMakeFiles/tasks.dir/tasks.c.obj CMakeFiles/tasks.dir/tests.c.obj CMakeFiles/tasks.dir/stringTasks.c.obj CMakeFiles/tasks.dir/stringTests.c.obj
 "D:\Studing programs\CLion 2021.3.3\bin\mingw\bin\ranlib.exe" libtasks.a

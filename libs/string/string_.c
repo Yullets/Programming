@@ -92,22 +92,3 @@ char *copyIfReverse(char *rbeginSource, const char *rendSource,
     return beginDestination;
 }
 
-void removeNonLetters(char *s) {
-    char *endSource = s + strlen_(s);;
-    char *destination = copyIf(s, endSource, s, isgraph);
-    *destination = '\0';
-}
-
-//void removeExtraSpaces(char *s){
-//    char *begin = s;
-//    char *destination;
-//    int count = 0;
-//    while (begin != '.') {
-//        if (begin != ' ' || (begin == ' ' && count < 2)) {
-//            memcpy(begin, destination, sizeof(char));
-//            begin++;
-//        }
-//
-//
-//    }
-//}

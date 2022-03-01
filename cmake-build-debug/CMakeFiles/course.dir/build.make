@@ -96,6 +96,7 @@ course.exe: libs/algorithms/libalgorithms.a
 course.exe: libs/tasks/libtasks.a
 course.exe: libs/data_structures/libdata_structures.a
 course.exe: libs/algorithms/libalgorithms.a
+course.exe: libs/string/libstring_.a
 course.exe: CMakeFiles/course.dir/linklibs.rsp
 course.exe: CMakeFiles/course.dir/objects1.rsp
 course.exe: CMakeFiles/course.dir/link.txt

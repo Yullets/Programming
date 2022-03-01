@@ -40,6 +40,12 @@
 				"file" : 0,
 				"line" : 7,
 				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 8,
+				"parent" : 0
 			}
 		]
 	},
@@ -68,7 +74,8 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3
 			]
 		}
 	],
@@ -81,6 +88,10 @@
 		{
 			"backtrace" : 3,
 			"id" : "algorithms::@4f84be16bc75261b2db5"
+		},
+		{
+			"backtrace" : 4,
+			"id" : "string_::@3f2b1fb9d1440f41f43e"
 		}
 	],
 	"id" : "tasks::@fbe435b444e2ef7d0c92",
@@ -99,7 +110,8 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3
 			]
 		}
 	],
@@ -120,7 +132,13 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "libs/tasks/string_.c",
+			"path" : "libs/tasks/stringTasks.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "libs/tasks/stringTests.c",
 			"sourceGroupIndex" : 0
 		}
 	],

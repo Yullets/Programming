@@ -23,7 +23,11 @@ CMakeFiles/course.dir/main.c.obj: ../main.c \
   D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/memory.h \
   D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdbool.h \
   ../libs/tasks/tasks.h \
-  ../libs/tasks/tests.h
+  ../libs/tasks/tests.h \
+  ../libs/string/string_.h \
+  ../libs/tasks/stringTests.h \
+  ../libs/string/string_.h \
+  ../libs/tasks/stringTests.h
 
 
 ../main.c:
@@ -71,3 +75,7 @@ D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0
 ../libs/tasks/tasks.h:
 
 ../libs/tasks/tests.h:
+
+../libs/string/string_.h:
+
+../libs/tasks/stringTests.h:

@@ -14,6 +14,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../libs/CMakeLists.txt"
   "../libs/algorithms/CMakeLists.txt"
   "../libs/data_structures/CMakeLists.txt"
+  "../libs/string/CMakeLists.txt"
   "../libs/tasks/CMakeLists.txt"
   "D:/Studing programs/CLion 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCInformation.cmake"
   "D:/Studing programs/CLion 2021.3.3/bin/cmake/win/share/cmake-3.21/Modules/CMakeCommonLanguageInclude.cmake"
@@ -49,6 +50,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "libs/CMakeFiles/CMakeDirectoryInformation.cmake"
   "libs/data_structures/CMakeFiles/CMakeDirectoryInformation.cmake"
   "libs/algorithms/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "libs/string/CMakeFiles/CMakeDirectoryInformation.cmake"
   "libs/tasks/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -57,5 +59,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/course.dir/DependInfo.cmake"
   "libs/data_structures/CMakeFiles/data_structures.dir/DependInfo.cmake"
   "libs/algorithms/CMakeFiles/algorithms.dir/DependInfo.cmake"
+  "libs/string/CMakeFiles/string_.dir/DependInfo.cmake"
   "libs/tasks/CMakeFiles/tasks.dir/DependInfo.cmake"
   )

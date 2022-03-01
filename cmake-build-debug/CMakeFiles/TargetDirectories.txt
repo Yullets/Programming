@@ -9,6 +9,9 @@ C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/data_structures/
 C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/algorithms/CMakeFiles/algorithms.dir
 C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/algorithms/CMakeFiles/edit_cache.dir
 C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/algorithms/CMakeFiles/rebuild_cache.dir
+C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/string/CMakeFiles/rebuild_cache.dir
+C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/string/CMakeFiles/string_.dir
+C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/string/CMakeFiles/edit_cache.dir
 C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/tasks/CMakeFiles/rebuild_cache.dir
 C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/tasks/CMakeFiles/tasks.dir
 C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/tasks/CMakeFiles/edit_cache.dir

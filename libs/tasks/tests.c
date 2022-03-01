@@ -10,10 +10,7 @@
 #include "../data_structures/matrix/matrix.h"
 #include "tasks.h"
 #include "tests.h"
-#include "string_.h"
-
-#define ASSERT_STRING(expected, got) assertString (expected, got, \
-                                                   __FILE__, __FUNCTION__, __LINE__)
+#include "../string/string_.h"
 
 
 void test_changeRowsWithMinAndMaxEl1() {
@@ -490,50 +487,29 @@ void test_getSpecialScalarProduct() {
     freeMemMatrix(&m);
 }
 
-//строки
-
-void assertString(const char *expected, char *got,
-                  char const *fileName, char const *funcName,
-                  int line) {
-    if (strcmp(expected, got)) {
-        fprintf(stderr, " File %s\n", fileName);
-        fprintf(stderr, "%s - failed on line %d\n", funcName, line);
-        fprintf(stderr, " Expected : \"%s \"\n", expected);
-        fprintf(stderr, "Got: \"%s\"\n\n", got);
-    } else
-        fprintf(stderr, "%s - OK\n", funcName);
-}
-
-void test_removeNonLetters() {
-    char s[] = "Hi123 ";
-    removeNonLetters(s);
-    ASSERT_STRING("Hi123", s);
-}
-
-void tests() {
-    test_changeRowsWithMinAndMaxEl1();
-    test_changeRowsWithMinAndMaxEl2();
-    test_sortRowsByMaxElement1();
-    test_sortRowsByMaxElement2();
-    test_sortColsByMinElement();
-    test_getSquareOfMatrixIfSymmetric1();
-    test_getSquareOfMatrixIfSymmetric2();
-    test_transposeIfMatrixHasNotEqualSumOfRows1();
-    test_transposeIfMatrixHasNotEqualSumOfRows2();
-    test_isMutuallyInverseMatrices1();
-    test_isMutuallyInverseMatrices2();
-    test_findSumOfMaxesOfPseudoDiagonal();
-    test_getMinInArea();
-    test_sortByDistances();
-    test_countEqClassesByRowsSum();
-    test_getNSpecialElement();
-    test_swapPenultimateRow();
-    test_countNonDescendingRowsMatrices1();
-    test_countNonDescendingRowsMatrices2();
-    test_countZeroRows1();
-    test_countZeroRows2();
-    test_getNSpecialElement2();
-    test_getVectorIndexWithMaxAngle();
-    test_getSpecialScalarProduct();
-    test_removeNonLetters();
-}
+//void tests() {
+//    test_changeRowsWithMinAndMaxEl1();
+//    test_changeRowsWithMinAndMaxEl2();
+//    test_sortRowsByMaxElement1();
+//    test_sortRowsByMaxElement2();
+//    test_sortColsByMinElement();
+//    test_getSquareOfMatrixIfSymmetric1();
+//    test_getSquareOfMatrixIfSymmetric2();
+//    test_transposeIfMatrixHasNotEqualSumOfRows1();
+//    test_transposeIfMatrixHasNotEqualSumOfRows2();
+//    test_isMutuallyInverseMatrices1();
+//    test_isMutuallyInverseMatrices2();
+//    test_findSumOfMaxesOfPseudoDiagonal();
+//    test_getMinInArea();
+//    test_sortByDistances();
+//    test_countEqClassesByRowsSum();
+//    test_getNSpecialElement();
+//    test_swapPenultimateRow();
+//    test_countNonDescendingRowsMatrices1();
+//    test_countNonDescendingRowsMatrices2();
+//    test_countZeroRows1();
+//    test_countZeroRows2();
+//    test_getNSpecialElement2();
+//    test_getVectorIndexWithMaxAngle();
+//    test_getSpecialScalarProduct();
+//}

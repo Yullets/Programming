@@ -5,7 +5,7 @@
 		<Option title="course"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\libs\;CMake Files\libs\data_structures\;CMake Files\libs\algorithms\;CMake Files\libs\tasks\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\libs\;CMake Files\libs\data_structures\;CMake Files\libs\algorithms\;CMake Files\libs\string\;CMake Files\libs\tasks\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug"/>
@@ -151,6 +151,44 @@
 					<DistClean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/algorithms/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="string_">
+				<Option output="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/string/libstring_.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/string"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/string/Makefile&quot;  VERBOSE=1 string_"/>
+					<CompileFile command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/string/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/string/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/string/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="string_/fast">
+				<Option output="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/string/libstring_.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/string"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/string/Makefile&quot;  VERBOSE=1 string_/fast"/>
+					<CompileFile command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/string/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/string/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Studing programs/CLion 2021.3.3/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/string/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="tasks">
 				<Option output="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/tasks/libtasks.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/tasks"/>
@@ -238,10 +276,22 @@
 		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/data_structures/vector/vectorVoid.h">
 			<Option target="data_structures"/>
 		</Unit>
-		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/tasks/string_.c">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/string/string_.c">
+			<Option target="string_"/>
+		</Unit>
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/string/string_.h">
+			<Option target="string_"/>
+		</Unit>
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/tasks/stringTasks.c">
 			<Option target="tasks"/>
 		</Unit>
-		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/tasks/string_.h">
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/tasks/stringTasks.h">
+			<Option target="tasks"/>
+		</Unit>
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/tasks/stringTests.c">
+			<Option target="tasks"/>
+		</Unit>
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/tasks/stringTests.h">
 			<Option target="tasks"/>
 		</Unit>
 		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/tasks/tasks.c">
@@ -270,6 +320,9 @@
 		</Unit>
 		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/algorithms/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\libs\algorithms\"/>
+		</Unit>
+		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/string/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\libs\string\"/>
 		</Unit>
 		<Unit filename="C:/Users/Yulia/CLionProjects/Programming/libs/tasks/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\libs\tasks\"/>

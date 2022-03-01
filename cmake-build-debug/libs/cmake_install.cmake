@@ -49,6 +49,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/string/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("C:/Users/Yulia/CLionProjects/Programming/cmake-build-debug/libs/tasks/cmake_install.cmake")
 endif()
 

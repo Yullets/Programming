@@ -90,6 +90,10 @@
 		},
 		{
 			"backtrace" : 4,
+			"id" : "string_::@3f2b1fb9d1440f41f43e"
+		},
+		{
+			"backtrace" : 4,
 			"id" : "tasks::@fbe435b444e2ef7d0c92"
 		}
 	],
@@ -129,6 +133,10 @@
 			{
 				"backtrace" : 3,
 				"fragment" : "libs\\algorithms\\libalgorithms.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "libs\\string\\libstring_.a",
 				"role" : "libraries"
 			},
 			{

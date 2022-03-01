@@ -126,6 +126,9 @@
 			"path" : "libs/algorithms/CMakeLists.txt"
 		},
 		{
+			"path" : "libs/string/CMakeLists.txt"
+		},
+		{
 			"path" : "libs/tasks/CMakeLists.txt"
 		}
 	],
