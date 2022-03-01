@@ -2,7 +2,7 @@
 // Created by Yulia on 26.02.2022.
 //
 
-//#include <string.h>
+#include <string.h>
 #include <stdio.h>
 #include <assert.h>
 #include "string_.h"
@@ -39,34 +39,34 @@ char *findSpace(char *begin) {
     return begin;
 }
 
-char* findNonSpaceReverse(char *rbegin, const char *rend){
+char *findNonSpaceReverse(char *rbegin, const char *rend) {
     while (rbegin > rend && isspace(*rbegin))
         rbegin--;
 
     return rbegin;
 }
 
-char* findSpaceReverse(char *rbegin, const char *rend) {
+char *findSpaceReverse(char *rbegin, const char *rend) {
     while (rbegin > rend && !isspace(*rbegin))
         rbegin--;
 
     return rbegin;
 }
 
-int strcmp (const char *lhs, const char *rhs) {
+int strcmp(const char *lhs, const char *rhs) {
     while (*lhs != '\0' && (*lhs == *rhs))
         lhs++, rhs++;
 
     return *lhs - *rhs;
 }
 
-char* copy(const char *beginSource, const char *endSource, char *beginDestination) {
+char *copy(const char *beginSource, const char *endSource, char *beginDestination) {
     memcpy(beginDestination, beginSource, sizeof(char) * (endSource - beginSource));
 
     return beginDestination + (endSource - beginSource);
 }
 
-char* copyIf(char *beginSource, const char *endSource,
+char *copyIf(char *beginSource, const char *endSource,
              char *beginDestination, int (*f)(int)) {
     while (beginSource < endSource) {
         if (f(*beginSource)) {
@@ -79,10 +79,10 @@ char* copyIf(char *beginSource, const char *endSource,
     return beginDestination;
 }
 
-char* copyIfReverse(char *rbeginSource, const char *rendSource,
+char *copyIfReverse(char *rbeginSource, const char *rendSource,
                     char *beginDestination, int (*f)(int)) {
     while (rbeginSource > rendSource) {
-        if(f(*rbeginSource)) {
+        if (f(*rbeginSource)) {
             memcpy(beginDestination, rbeginSource, sizeof(char));
             beginDestination++;
         }
@@ -91,3 +91,23 @@ char* copyIfReverse(char *rbeginSource, const char *rendSource,
 
     return beginDestination;
 }
+
+void removeNonLetters(char *s) {
+    char *endSource = s + strlen_(s);;
+    char *destination = copyIf(s, endSource, s, isgraph);
+    *destination = '\0';
+}
+
+//void removeExtraSpaces(char *s){
+//    char *begin = s;
+//    char *destination;
+//    int count = 0;
+//    while (begin != '.') {
+//        if (begin != ' ' || (begin == ' ' && count < 2)) {
+//            memcpy(begin, destination, sizeof(char));
+//            begin++;
+//        }
+//
+//
+//    }
+//}

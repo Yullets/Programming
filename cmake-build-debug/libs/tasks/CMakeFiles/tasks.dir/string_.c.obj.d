@@ -14,24 +14,12 @@ libs/tasks/CMakeFiles/tasks.dir/string_.c.obj: \
  D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/_mingw_off_t.h \
  D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
  D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
- D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdbool.h \
- D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/malloc.h \
- D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/mm_malloc.h \
- D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/stdlib.h \
- D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
- D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h \
- D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h \
- D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/limits.h \
- D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
- D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/errno.h \
  D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/assert.h \
- D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/math.h \
- C:/Users/Yulia/CLionProjects/Programming/libs/algorithms/algorithm.h \
- C:/Users/Yulia/CLionProjects/Programming/libs/data_structures/matrix/matrix.h \
+ C:\Users\Yulia\CLionProjects\Programming\libs\tasks\string_.h \
  D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdint.h \
  D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/stdint.h \
  D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stddef.h \
  D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/stddef.h \
  D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/memory.h \
- C:\Users\Yulia\CLionProjects\Programming\libs\tasks\string_.h \
- C:/Users/Yulia/CLionProjects/Programming/libs/algorithms/array/array.h
+ D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdbool.h \
+ D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/ctype.h

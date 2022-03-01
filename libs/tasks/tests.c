@@ -10,6 +10,11 @@
 #include "../data_structures/matrix/matrix.h"
 #include "tasks.h"
 #include "tests.h"
+#include "string_.h"
+
+#define ASSERT_STRING(expected, got) assertString (expected, got, \
+                                                   __FILE__, __FUNCTION__, __LINE__)
+
 
 void test_changeRowsWithMinAndMaxEl1() {
     matrix m = createMatrixFromArray(
@@ -451,10 +456,10 @@ void test_getNSpecialElement2() {
 void test_getVectorIndexWithMaxAngle() {
     matrix m = createMatrixFromArray(
             (int[]) {
-                4, 5, 6,
-                7, 8, 9,
-                1, 2, 3,
-             },
+                    4, 5, 6,
+                    7, 8, 9,
+                    1, 2, 3,
+            },
             3, 3);
 
     int v[] = {
@@ -485,6 +490,26 @@ void test_getSpecialScalarProduct() {
     freeMemMatrix(&m);
 }
 
+//строки
+
+void assertString(const char *expected, char *got,
+                  char const *fileName, char const *funcName,
+                  int line) {
+    if (strcmp(expected, got)) {
+        fprintf(stderr, " File %s\n", fileName);
+        fprintf(stderr, "%s - failed on line %d\n", funcName, line);
+        fprintf(stderr, " Expected : \"%s \"\n", expected);
+        fprintf(stderr, "Got: \"%s\"\n\n", got);
+    } else
+        fprintf(stderr, "%s - OK\n", funcName);
+}
+
+void test_removeNonLetters() {
+    char s[] = "Hi123 ";
+    removeNonLetters(s);
+    ASSERT_STRING("Hi123", s);
+}
+
 void tests() {
     test_changeRowsWithMinAndMaxEl1();
     test_changeRowsWithMinAndMaxEl2();
@@ -510,4 +535,5 @@ void tests() {
     test_getNSpecialElement2();
     test_getVectorIndexWithMaxAngle();
     test_getSpecialScalarProduct();
+    test_removeNonLetters();
 }

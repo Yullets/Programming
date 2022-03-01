@@ -31,4 +31,5 @@ libs/tasks/CMakeFiles/tasks.dir/tests.c.obj: \
  D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/stddef.h \
  D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/memory.h \
  C:\Users\Yulia\CLionProjects\Programming\libs\tasks\tasks.h \
- C:\Users\Yulia\CLionProjects\Programming\libs\tasks\tests.h
+ C:\Users\Yulia\CLionProjects\Programming\libs\tasks\tests.h \
+ C:\Users\Yulia\CLionProjects\Programming\libs\tasks\string_.h
