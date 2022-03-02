@@ -104,3 +104,55 @@ void replaceNumber (char *s) {
     *buf = '\0';
     copy(_stringBuffer, buf, s);
 }
+
+bool isPalindrome (wordDescriptor s) {
+    char *left = s.begin;
+    char *right = s.end - 1;
+    while (right > left) {
+        if (*(left) != *(right))
+            return false;
+
+        left++;
+        right--;
+    }
+
+    return true;
+}
+
+char *findComma(char *begin) {
+    while (*begin != '\0')
+        if(*begin == ',')
+            return begin;
+
+        begin++;
+
+    return begin;
+}
+
+int getWordWithComma(char *beginSearch, wordDescriptor *word) {
+    word->begin = findNonSpace(beginSearch);
+    if (*word->begin == '\0')
+        return 0;
+
+    word->end = findComma(word->begin);
+
+    return 1;
+}
+
+int getCountOfPalindromes(char *s) {
+    wordDescriptor word;
+    int count = 0;
+
+    if (*s == '\0')
+        return count;
+
+    char *previous = s;
+    while (getWordWithComma(s, &word)) {
+        if(isPalindrome(word))
+            count++;
+
+        previous = word.end + 1;
+    }
+
+    return count;
+}

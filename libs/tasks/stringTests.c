@@ -40,11 +40,16 @@ void test_replaceNumber() {
     replaceNumber(s);
     ASSERT_STRING("a   bc ", s);
 }
+ void test_getCountOfPalindromes(){
+    char s[] = "abba, children, polliillop";
+    int res = getCountOfPalindromes(s);
+    assert(res == 2);
+}
 
 void tests() {
     test_removeNonLetters();
     test_digitToEndReverse();
     test_removeExtraSpaces();
     test_replaceNumber();
-    test_replaceNumber();
+    test_getCountOfPalindromes();
 }
