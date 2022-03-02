@@ -17,6 +17,10 @@ void assertString(const char *expected, char *got,
 
 void test_removeNonLetters();
 
+void test_removeExtraSpaces();
+
+void test_replaceNumber();
+
 void tests();
 
 #endif //COURSE_STRINGTESTS_H

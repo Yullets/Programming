@@ -13,19 +13,22 @@ void removeNonLetters(char *s) {
     *destination = '\0';
 }
 
-//void removeExtraSpaces(char *s){
-//    char *begin = s;
-//    char *destination;
-//    int count = 0;
-//    while (begin != '.') {
-//        if (begin != ' ' || (begin == ' ' && count < 2)) {
-//            memcpy(begin, destination, sizeof(char));
-//            begin++;
-//        }
-//
-//
-//    }
-//}
+void removeExtraSpaces(char *s) {
+    if(*s == '\0')
+        return;
+
+    char *begin = s;
+    s++;
+    while (*s != '\0') {
+        if (isspace(*s) && isspace(*begin))
+            *begin = ' ';
+        else
+            *(++begin) = *s;
+
+        s++;
+    }
+    *(++begin) = '\0';
+}
 
 int getWord(char *beginSearch, wordDescriptor *word) {
     word->begin = findNonSpace(beginSearch);
@@ -78,4 +81,26 @@ void digitToEndReverse(char *stringStart) {
         digitToEnd(word);
         beginString = word.end;
     }
+}
+
+void replaceNumber (char *s) {
+    char *begin = s;
+    char *buf = _stringBuffer;
+    while (*begin != '\0') {
+        if (isalpha(*begin)) {
+            *buf = *begin;
+            buf++;
+        } else if (isdigit(*begin)) {
+            char k = *begin - '0';
+            for(int i = 0; i < k; i++) {
+                *buf = ' ';
+                buf++;
+            }
+        }
+
+        begin++;
+    }
+
+    *buf = '\0';
+    copy(_stringBuffer, buf, s);
 }

@@ -23,13 +23,28 @@ void test_removeNonLetters() {
     ASSERT_STRING("Hi123", s);
 }
 
+void test_removeExtraSpaces() {
+    char s[] = "dreams  come  true";
+    removeExtraSpaces(s);
+    ASSERT_STRING("dreams come true", s);
+}
+
 void test_digitToEndReverse() {
     char s[] = "favou9572rite";
     digitToEndReverse(s);
     ASSERT_STRING("favourite2759", s);
 }
 
+void test_replaceNumber() {
+    char s[100] = "a3b0c1";
+    replaceNumber(s);
+    ASSERT_STRING("a   bc ", s);
+}
+
 void tests() {
     test_removeNonLetters();
     test_digitToEndReverse();
+    test_removeExtraSpaces();
+    test_replaceNumber();
+    test_replaceNumber();
 }

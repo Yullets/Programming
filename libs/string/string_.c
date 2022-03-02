@@ -3,12 +3,9 @@
 //
 
 #include <string.h>
-#include <stdio.h>
 #include <assert.h>
 #include "string_.h"
 #include <ctype.h>
-#include <memory.h>
-
 
 size_t strlen_(char *begin) {
     char *end = begin;
