@@ -20,5 +20,12 @@ void replaceNumber(char *s);
 
 int getCountOfPalindromes(char *s);
 
+char getEndOfString(char *s);
+
+int areWordsEqual(wordDescriptor w1,
+                  wordDescriptor w2);
+
+void replace(char *source, char *w1, char *w2);
+
 #endif //COURSE_STRINGTASKS_H
 

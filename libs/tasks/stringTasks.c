@@ -14,7 +14,7 @@ void removeNonLetters(char *s) {
 }
 
 void removeExtraSpaces(char *s) {
-    if(*s == '\0')
+    if (*s == '\0')
         return;
 
     char *begin = s;
@@ -83,19 +83,19 @@ void digitToEndReverse(char *stringStart) {
     }
 }
 
-void replaceNumber (char *s) {
+void replaceNumber(char *s) {
     char *begin = s;
     char *buf = _stringBuffer;
     while (*begin != '\0') {
-        if (isalpha(*begin)) {
-            *buf = *begin;
-            buf++;
-        } else if (isdigit(*begin)) {
-            char k = *begin - '0';
-            for(int i = 0; i < k; i++) {
+        if (isdigit(*begin)) {
+            char digit = *begin - '0';
+            for (int i = 0; i < digit; i++) {
                 *buf = ' ';
                 buf++;
             }
+        } else {
+            *buf = *begin;
+            buf++;
         }
 
         begin++;
@@ -105,7 +105,56 @@ void replaceNumber (char *s) {
     copy(_stringBuffer, buf, s);
 }
 
-bool isPalindrome (wordDescriptor s) {
+char getEndOfString(char *s) {
+    char *end = s;
+    while (*s != '\0')
+        end++;
+
+    return end;
+}
+
+int areWordsEqual(wordDescriptor w1,
+                  wordDescriptor w2) {
+    size_t firstWordLength = w1.end - w1.begin - 1;
+    size_t secondWordLength = w2.end - w2.begin - 1;
+
+    if (firstWordLength != secondWordLength)
+        return 0;
+
+    return !memcmp(w1.begin, w2.begin, firstWordLength);
+}
+
+void replace(char *source, char *w1, char *w2) {
+    size_t w1Size = strlen_(w1);
+    size_t w2Size = strlen_(w2);
+    wordDescriptor word1 = {w1, w1 + w1Size};
+    wordDescriptor word2 = {w2, w2 + w2Size};
+
+    char *readPtr, *recPtr;
+    if (w1Size >= w2Size) {
+        readPtr = source;
+        recPtr = source;
+    } else {
+        copy(source, getEndOfString(source), _stringBuffer);
+        readPtr = _stringBuffer;
+        recPtr = source;
+    }
+
+    wordDescriptor word;
+    while (getWord(readPtr, &word)) {
+        if (areWordsEqual(word, word1))
+            recPtr = copy(word2.begin, word2.end, recPtr);
+        else
+            recPtr = copy(word.begin, word.end, recPtr);
+
+        *recPtr = ' ';
+        recPtr++;
+        readPtr = word.end;
+    }
+    *recPtr = '\0';
+}
+
+bool isPalindrome(wordDescriptor s) {
     char *left = s.begin;
     char *right = s.end - 1;
     while (right > left) {
@@ -120,11 +169,11 @@ bool isPalindrome (wordDescriptor s) {
 }
 
 char *findComma(char *begin) {
-    while (*begin != '\0')
-        if(*begin == ',')
+    while (*begin != '\0') {
+        if (*begin == ',')
             return begin;
-
         begin++;
+    }
 
     return begin;
 }
@@ -147,11 +196,10 @@ int getCountOfPalindromes(char *s) {
         return count;
 
     char *previous = s;
-    while (getWordWithComma(s, &word)) {
-        if(isPalindrome(word))
+    while (getWordWithComma(previous, &word)) {
+        if (isPalindrome(word))
             count++;
-
-        previous = word.end + 1;
+        previous = word.end + (*word.end != '\0');
     }
 
     return count;

@@ -40,10 +40,25 @@ void test_replaceNumber() {
     replaceNumber(s);
     ASSERT_STRING("a   bc ", s);
 }
- void test_getCountOfPalindromes(){
+
+void test_getCountOfPalindromes1() {
     char s[] = "abba, children, polliillop";
     int res = getCountOfPalindromes(s);
     assert(res == 2);
+}
+
+void test_getCountOfPalindromes2() {
+    char s[] = "aaaa, aa, ";
+    int res = getCountOfPalindromes(s);
+    assert(res == 2);
+}
+
+void test_replace() {
+    char source[MAX_STRING_SIZE] = "love smile smile smile";
+    char w1[] = "smile";
+    char w2[] = "happy";
+    replace(source, w1, w2);
+    ASSERT_STRING("love happy happy happy ", source);
 }
 
 void tests() {
@@ -51,5 +66,7 @@ void tests() {
     test_digitToEndReverse();
     test_removeExtraSpaces();
     test_replaceNumber();
-    test_getCountOfPalindromes();
+    test_getCountOfPalindromes1();
+    test_getCountOfPalindromes2();
+    test_replace();
 }

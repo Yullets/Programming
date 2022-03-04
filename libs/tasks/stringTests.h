@@ -19,7 +19,15 @@ void test_removeNonLetters();
 
 void test_removeExtraSpaces();
 
+void test_digitToEndReverse();
+
 void test_replaceNumber();
+
+void test_getCountOfPalindromes1();
+
+void test_getCountOfPalindromes2();
+
+void test_replace();
 
 void tests();
 
