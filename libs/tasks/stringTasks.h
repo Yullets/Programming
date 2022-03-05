@@ -35,5 +35,7 @@ void printWordsAndReverse(char *s);
 
 void reverseTheOrderOfWords(char *s);
 
+bool isOnlyUniqueWords(char *s);
+
 #endif //COURSE_STRINGTASKS_H
 

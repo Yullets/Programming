@@ -183,7 +183,7 @@ void getBagOfWords(BagOfWords *ws, char *s) {
 }
 
 void printWord(wordDescriptor word) {
-    char* buff_end = copy(word.begin,word.end,
+    char *buff_end = copy(word.begin, word.end,
                           _stringBuffer);
     *buff_end = '\0';
 
@@ -269,4 +269,23 @@ void reverseTheOrderOfWords(char *s) {
     *buf = '\0';
     s = copy(_stringBuffer, buf, s);
     *(s - 1) = '\0';
+}
+
+bool isOnlyUniqueWords(char *s) {
+    getBagOfWords(&_bag, s);
+
+    wordDescriptor *curWord = _bag.words;
+    wordDescriptor *endWord = _bag.words + _bag.size - 1;
+
+    while (curWord < endWord) {
+        wordDescriptor *word = curWord + 1;
+        while (word <= endWord) {
+            if (areWordsEqual(*curWord, *word))
+                return false;
+            word++;
+        }
+        curWord++;
+    }
+
+    return true;
 }

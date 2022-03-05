@@ -94,6 +94,14 @@ void test_reverseTheOrderOfWords2() {
     ASSERT_STRING("", s);
 }
 
+void test_isOnlyUniqueWords() {
+    char s[] = "keep your friends close and your enemies closer";
+    int res = isOnlyUniqueWords(s);
+    assert(res == false);
+    printf("test_isOnlyUniqueWords - OK");
+    printf("\n");
+}
+
 void tests() {
     test_removeNonLetters();
     test_digitToEndReverse();
@@ -107,4 +115,5 @@ void tests() {
     //test_printWordsAndReverse();
     test_reverseTheOrderOfWords1();
     test_reverseTheOrderOfWords2();
+    test_isOnlyUniqueWords();
 }

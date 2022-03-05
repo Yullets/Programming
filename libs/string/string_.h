@@ -21,14 +21,21 @@ typedef struct wordDescriptor {
 } wordDescriptor;
 
 typedef struct BagOfWords {
-    wordDescriptor words [MAX_N_WORDS_IN_STRING];
-    size_t size ;
+    wordDescriptor words[MAX_N_WORDS_IN_STRING];
+    size_t size;
 } BagOfWords;
+
+typedef enum WordBeforeFirstWordWithAReturnCode {
+    FIRST_WORD_WITH_A,
+    NOT_FOUND_A_WORD_WITH_A,
+    WORD_FOUND,
+    EMPTY_STRING
+} WordBeforeFirstWordWithAReturnCode;
 
 static char _stringBuffer[MAX_STRING_SIZE + 1];
 
-static BagOfWords _bag ;
-static BagOfWords _bag2 ;
+static BagOfWords _bag;
+static BagOfWords _bag2;
 
 //возвращает кол-во символов в стоке (не считая 0-символ)
 size_t strlen_(char *begin);
