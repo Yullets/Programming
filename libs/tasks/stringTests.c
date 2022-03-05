@@ -82,6 +82,18 @@ void test_printWordsAndReverse() {
     printWordsAndReverse(s);
 }
 
+void test_reverseTheOrderOfWords1() {
+    char s[] = "better late than never";
+    reverseTheOrderOfWords(s);
+    ASSERT_STRING("never than late better", s);
+}
+
+void test_reverseTheOrderOfWords2() {
+    char s[] = "";
+    reverseTheOrderOfWords(s);
+    ASSERT_STRING("", s);
+}
+
 void tests() {
     test_removeNonLetters();
     test_digitToEndReverse();
@@ -92,5 +104,7 @@ void tests() {
     test_replace();
     test_orderedByAlfa1();
     test_orderedByAlfa2();
-    test_printWordsAndReverse();
+    //test_printWordsAndReverse();
+    test_reverseTheOrderOfWords1();
+    test_reverseTheOrderOfWords2();
 }

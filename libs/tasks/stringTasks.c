@@ -252,3 +252,21 @@ int getCountOfPalindromes(char *s) {
 
     return count;
 }
+
+void reverseTheOrderOfWords(char *s) {
+    if (*s == '\0')
+        return;
+
+    BagOfWords ws;
+    getBagOfWords(&ws, s);
+    char *buf = _stringBuffer;
+
+    for (int i = ws.size - 1; i >= 0; i--) {
+        buf = copy(ws.words[i].begin, ws.words[i].end, buf);
+        *buf = ' ';
+        buf++;
+    }
+    *buf = '\0';
+    s = copy(_stringBuffer, buf, s);
+    *(s - 1) = '\0';
+}

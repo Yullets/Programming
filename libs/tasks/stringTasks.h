@@ -33,5 +33,7 @@ void getBagOfWords(BagOfWords *ws, char *s);
 
 void printWordsAndReverse(char *s);
 
+void reverseTheOrderOfWords(char *s);
+
 #endif //COURSE_STRINGTASKS_H
 
