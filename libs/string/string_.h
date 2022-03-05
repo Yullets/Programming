@@ -27,6 +27,9 @@ typedef struct BagOfWords {
 
 static char _stringBuffer[MAX_STRING_SIZE + 1];
 
+static BagOfWords _bag ;
+static BagOfWords _bag2 ;
+
 //возвращает кол-во символов в стоке (не считая 0-символ)
 size_t strlen_(char *begin);
 

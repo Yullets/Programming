@@ -173,6 +173,34 @@ bool orderedByAlfa(char *s) {
     return true;
 }
 
+void getBagOfWords(BagOfWords *ws, char *s) {
+    wordDescriptor w;
+    ws->size = 0;
+    while (getWord(s, &w)) {
+        ws->words[ws->size++] = w;
+        s = w.end;
+    }
+}
+
+void printWord(wordDescriptor word) {
+    char* buff_end = copy(word.begin,word.end,
+                          _stringBuffer);
+    *buff_end = '\0';
+
+    printf("%s", _stringBuffer);
+}
+
+void printWordsAndReverse(char *s) {
+    char *begin = s;
+
+    BagOfWords ws;
+    getBagOfWords(&ws, begin);
+
+    for (int i = ws.size - 1; i >= 0; i--) {
+        printWord(ws.words[i]);
+        printf("\n");
+    }
+}
 
 bool isPalindrome(wordDescriptor s) {
     char *left = s.begin;

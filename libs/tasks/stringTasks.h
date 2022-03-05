@@ -29,5 +29,9 @@ void replace(char *source, char *w1, char *w2);
 
 bool orderedByAlfa(char *s);
 
+void getBagOfWords(BagOfWords *ws, char *s);
+
+void printWordsAndReverse(char *s);
+
 #endif //COURSE_STRINGTASKS_H
 

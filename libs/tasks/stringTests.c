@@ -77,6 +77,11 @@ void test_orderedByAlfa2() {
     printf("\n");
 }
 
+void test_printWordsAndReverse() {
+    char s[] = "no man is an island";
+    printWordsAndReverse(s);
+}
+
 void tests() {
     test_removeNonLetters();
     test_digitToEndReverse();
@@ -87,4 +92,5 @@ void tests() {
     test_replace();
     test_orderedByAlfa1();
     test_orderedByAlfa2();
+    test_printWordsAndReverse();
 }
