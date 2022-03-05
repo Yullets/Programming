@@ -20,6 +20,11 @@ typedef struct wordDescriptor {
     char *end;
 } wordDescriptor;
 
+typedef struct BagOfWords {
+    wordDescriptor words [MAX_N_WORDS_IN_STRING];
+    size_t size ;
+} BagOfWords;
+
 static char _stringBuffer[MAX_STRING_SIZE + 1];
 
 //возвращает кол-во символов в стоке (не считая 0-символ)

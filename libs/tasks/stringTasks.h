@@ -27,5 +27,7 @@ int areWordsEqual(wordDescriptor w1,
 
 void replace(char *source, char *w1, char *w2);
 
+bool orderedByAlfa(char *s);
+
 #endif //COURSE_STRINGTASKS_H
 

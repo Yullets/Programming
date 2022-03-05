@@ -61,6 +61,22 @@ void test_replace() {
     ASSERT_STRING("love happy happy happy ", source);
 }
 
+void test_orderedByAlfa1() {
+    char s[] = "put your best foot forward";
+    int res = orderedByAlfa(s);
+    assert(res == false);
+    printf("test_orderedByAlfa1 - OK");
+    printf("\n");
+}
+
+void test_orderedByAlfa2() {
+    char s[] = "happy new year";
+    int res = orderedByAlfa(s);
+    assert(res == true);
+    printf("test_orderedByAlfa2 - OK");
+    printf("\n");
+}
+
 void tests() {
     test_removeNonLetters();
     test_digitToEndReverse();
@@ -69,4 +85,6 @@ void tests() {
     test_getCountOfPalindromes1();
     test_getCountOfPalindromes2();
     test_replace();
+    test_orderedByAlfa1();
+    test_orderedByAlfa2();
 }
