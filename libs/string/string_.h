@@ -86,4 +86,8 @@ char *copyIfReverse(char *rbeginSource, const char *rendSource,
 
 void removeNonLetters(char *s);
 
+bool getWordReverse(char *rbegin, char *rend, wordDescriptor *word);
+
+void wordDescriptorToString(wordDescriptor word, char *destination);
+
 #endif //COURSE_STRING__H

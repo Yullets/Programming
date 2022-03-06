@@ -20,7 +20,7 @@ void replaceNumber(char *s);
 
 int getCountOfPalindromes(char *s);
 
-char getEndOfString(char *s);
+char *getEndOfString(char *s);
 
 int areWordsEqual(wordDescriptor w1,
                   wordDescriptor w2);
@@ -43,6 +43,8 @@ WordBeforeFirstWordWithAReturnCode getWordBeforeFirstWordWithA(
         char *s, wordDescriptor *wordBefore);
 
 void printWordBeforeFirstWordWithA(char *s);
+
+bool getLastWordOfString1AlsoHasInString2(char *s1, char *s2, wordDescriptor *word);
 
 bool isOnlyUniqueWords(char *s);
 

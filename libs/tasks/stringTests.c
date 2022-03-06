@@ -4,6 +4,7 @@
 #include "../string/string_.h"
 #include "stringTasks.h"
 #include "stringTests.h"
+#include "../string/string_.h"
 
 void assertString(const char *expected, char *got,
                   char const *fileName, char const *funcName,
@@ -107,6 +108,22 @@ void test_printWordBeforeFirstWordWithA() {
     printWordBeforeFirstWordWithA(s);
 }
 
+void test_getLastWordOfString1AlsoHasInString2() {
+    char s1[] = "you cannot eat your cake and eat it too";
+    char s2[] = "learn to walk before you run";
+
+    wordDescriptor result_wd;
+    bool result = getLastWordOfString1AlsoHasInString2(s1, s2, &result_wd);
+
+    char resultWord[MAX_STRING_SIZE];
+    wordDescriptorToString(result_wd, resultWord);
+    char expectedWord[] = "you";
+    bool expectedResult = true;
+
+    assert(expectedResult == result);
+    ASSERT_STRING(expectedWord, resultWord);
+}
+
 void test_isOnlyUniqueWords() {
     char s[] = "keep your friends close and your enemies closer";
     int res = isOnlyUniqueWords(s);
@@ -131,4 +148,5 @@ void tests() {
     test_isOnlyUniqueWords();
     //test_printWordBeforeFirstWordWithA();
     test_mixTwoStrings();
+    test_getLastWordOfString1AlsoHasInString2();
 }

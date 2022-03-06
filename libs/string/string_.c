@@ -92,3 +92,21 @@ char *copyIfReverse(char *rbeginSource, const char *rendSource, char *beginDesti
     return beginDestination;
 }
 
+
+bool getWordReverse(char *rbegin, char *rend, wordDescriptor *word) {
+   char *wordEnd = findNonSpaceReverse(rbegin, rend);
+    if(wordEnd == rend)
+        return false;
+
+    char *wordBegin = findSpaceReverse(wordEnd, rend);
+
+    word->begin = wordBegin + 1;
+    word->end = wordEnd + 1;
+    return true;
+}
+
+void wordDescriptorToString(wordDescriptor word, char *destination) {
+    destination = copy(word.begin, word.end, destination);
+    *destination = '\0';
+}
+

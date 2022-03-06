@@ -30,14 +30,14 @@ void removeExtraSpaces(char *s) {
     *(++begin) = '\0';
 }
 
-int getWord(char *beginSearch, wordDescriptor *word) {
+bool getWord(char *beginSearch, wordDescriptor *word) {
     word->begin = findNonSpace(beginSearch);
     if (*word->begin == '\0')
-        return 0;
+        return false;
 
     word->end = findSpace(word->begin);
 
-    return 1;
+    return true;
 }
 
 void digitToStart(wordDescriptor word) {
@@ -105,9 +105,10 @@ void replaceNumber(char *s) {
     copy(_stringBuffer, buf, s);
 }
 
-char getEndOfString(char *s) {
+char *getEndOfString(char *s) {
     char *end = s;
-    while (*s != '\0')
+
+    while (*end != '\0')
         end++;
 
     return end;
@@ -262,14 +263,14 @@ void mixTwoStrings(char *s1, char *s2, char *s3) {
             (isW2Found = getWord(beginSearch2, &word2)),
             isW1Found || isW2Found) {
 
-        if(isW1Found) {
+        if (isW1Found) {
             s3 = copy(word1.begin, word1.end, s3);
             *s3 = ' ';
             s3++;
             beginSearch1 = word1.end;
         }
 
-        if(isW2Found) {
+        if (isW2Found) {
             s3 = copy(word2.begin, word2.end, s3);
             *s3 = ' ';
             s3++;
@@ -280,90 +281,109 @@ void mixTwoStrings(char *s1, char *s2, char *s3) {
     *(s3 - 1) = '\0';
 }
 
-    void reverseTheOrderOfWords(char *s) {
-        if (*s == '\0')
-            return;
+void reverseTheOrderOfWords(char *s) {
+    if (*s == '\0')
+        return;
 
-        BagOfWords ws;
-        getBagOfWords(&ws, s);
-        char *buf = _stringBuffer;
+    BagOfWords ws;
+    getBagOfWords(&ws, s);
+    char *buf = _stringBuffer;
 
-        for (int i = ws.size - 1; i >= 0; i--) {
-            buf = copy(ws.words[i].begin, ws.words[i].end, buf);
-            *buf = ' ';
-            buf++;
-        }
-        *buf = '\0';
-        s = copy(_stringBuffer, buf, s);
-        *(s - 1) = '\0';
+    for (int i = ws.size - 1; i >= 0; i--) {
+        buf = copy(ws.words[i].begin, ws.words[i].end, buf);
+        *buf = ' ';
+        buf++;
+    }
+    *buf = '\0';
+    s = copy(_stringBuffer, buf, s);
+    *(s - 1) = '\0';
+}
+
+bool isLetterA(wordDescriptor w) {
+    char *begin = w.begin;
+
+    while (begin != w.end) {
+        if (*begin == 'a' || *begin == 'A')
+            return true;
+        begin++;
     }
 
-    bool isLetterA(wordDescriptor w) {
-        char *begin = w.begin;
+    return false;
+}
 
-        while (begin != w.end) {
-            if (*begin == 'a' || *begin == 'A')
+WordBeforeFirstWordWithAReturnCode getWordBeforeFirstWordWithA(
+        char *s, wordDescriptor *wordBefore) {
+    wordDescriptor word1;
+    char *begin = s;
+
+    if (!getWord(begin, &word1))
+        return EMPTY_STRING;
+
+    if (isLetterA(word1))
+        return FIRST_WORD_WITH_A;
+
+    wordDescriptor word2;
+    begin = word1.end;
+
+    while (getWord(begin, &word2)) {
+        if (isLetterA(word2)) {
+            wordBefore->begin = word1.begin;
+            wordBefore->end = word1.end;
+            return WORD_FOUND;
+        }
+        word1.begin = word2.begin;
+        word1.end = word2.end;
+        begin = word2.end;
+    }
+
+    return NOT_FOUND_A_WORD_WITH_A;
+}
+
+void printWordBeforeFirstWordWithA(char *s) {
+    char *begin = s;
+    wordDescriptor word;
+    WordBeforeFirstWordWithAReturnCode code = getWordBeforeFirstWordWithA(begin, &word);
+    if (code == WORD_FOUND) {
+        char *end = copy(word.begin, word.end, _stringBuffer);
+        *end = '\0';
+        printf("%s", _stringBuffer);
+    }
+}
+
+bool getLastWordOfString1AlsoHasInString2(char *s1, char *s2, wordDescriptor *word) {
+    getBagOfWords(&_bag, s2);
+    wordDescriptor *_bagEnd = _bag.words + _bag.size;
+    char *endOfTheString = getEndOfString(s1);
+
+    wordDescriptor lastWord;
+    while (getWordReverse(endOfTheString - 1, s1 - 1, &lastWord)) {
+        for (wordDescriptor *curWord = _bag.words; curWord < _bagEnd; curWord++) {
+            if (areWordsEqual(lastWord, *curWord)) {
+                *word = lastWord;
                 return true;
-            begin++;
-        }
-
-        return false;
-    }
-
-    WordBeforeFirstWordWithAReturnCode getWordBeforeFirstWordWithA(
-            char *s, wordDescriptor *wordBefore) {
-        wordDescriptor word1;
-        char *begin = s;
-
-        if (!getWord(begin, &word1))
-            return EMPTY_STRING;
-
-        if (isLetterA(word1))
-            return FIRST_WORD_WITH_A;
-
-        wordDescriptor word2;
-        begin = word1.end;
-
-        while (getWord(begin, &word2)) {
-            if (isLetterA(word2)) {
-                wordBefore->begin = word1.begin;
-                wordBefore->end = word1.end;
-                return WORD_FOUND;
             }
-            word1.begin = word2.begin;
-            word1.end = word2.end;
-            begin = word2.end;
         }
-
-        return NOT_FOUND_A_WORD_WITH_A;
+        endOfTheString = lastWord.begin;
     }
 
-    void printWordBeforeFirstWordWithA(char *s) {
-        char *begin = s;
-        wordDescriptor word;
-        WordBeforeFirstWordWithAReturnCode code = getWordBeforeFirstWordWithA(begin, &word);
-        if (code == WORD_FOUND) {
-            char *end = copy(word.begin, word.end, _stringBuffer);
-            *end = '\0';
-            printf("%s", _stringBuffer);
+    return false;
+}
+
+bool isOnlyUniqueWords(char *s) {
+    getBagOfWords(&_bag, s);
+
+    wordDescriptor *curWord = _bag.words;
+    wordDescriptor *endWord = _bag.words + _bag.size - 1;
+
+    while (curWord < endWord) {
+        wordDescriptor *word = curWord + 1;
+        while (word <= endWord) {
+            if (areWordsEqual(*curWord, *word))
+                return false;
+            word++;
         }
+        curWord++;
     }
 
-    bool isOnlyUniqueWords(char *s) {
-        getBagOfWords(&_bag, s);
-
-        wordDescriptor *curWord = _bag.words;
-        wordDescriptor *endWord = _bag.words + _bag.size - 1;
-
-        while (curWord < endWord) {
-            wordDescriptor *word = curWord + 1;
-            while (word <= endWord) {
-                if (areWordsEqual(*curWord, *word))
-                    return false;
-                word++;
-            }
-            curWord++;
-        }
-
-        return true;
-    }
+    return true;
+}
