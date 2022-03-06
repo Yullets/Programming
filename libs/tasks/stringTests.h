@@ -27,7 +27,23 @@ void test_getCountOfPalindromes1();
 
 void test_getCountOfPalindromes2();
 
+void test_mixTwoStrings();
+
 void test_replace();
+
+void test_orderedByAlfa1();
+
+void test_orderedByAlfa2();
+
+void test_printWordsAndReverse();
+
+void test_reverseTheOrderOfWords1();
+
+void test_reverseTheOrderOfWords2();
+
+void test_printWordBeforeFirstWordWithA();
+
+void test_isOnlyUniqueWords();
 
 void tests();
 

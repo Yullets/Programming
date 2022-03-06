@@ -253,90 +253,117 @@ int getCountOfPalindromes(char *s) {
     return count;
 }
 
-void reverseTheOrderOfWords(char *s) {
-    if (*s == '\0')
-        return;
+void mixTwoStrings(char *s1, char *s2, char *s3) {
+    wordDescriptor word1, word2;
+    bool isW1Found, isW2Found;
+    char *beginSearch1 = s1, *beginSearch2 = s2;
 
-    BagOfWords ws;
-    getBagOfWords(&ws, s);
-    char *buf = _stringBuffer;
+    while ((isW1Found = getWord(beginSearch1, &word1)),
+            (isW2Found = getWord(beginSearch2, &word2)),
+            isW1Found || isW2Found) {
 
-    for (int i = ws.size - 1; i >= 0; i--) {
-        buf = copy(ws.words[i].begin, ws.words[i].end, buf);
-        *buf = ' ';
-        buf++;
-    }
-    *buf = '\0';
-    s = copy(_stringBuffer, buf, s);
-    *(s - 1) = '\0';
-}
-
-bool isLetterA(wordDescriptor w) {
-    char *begin = w.begin;
-
-    while (begin != w.end) {
-        if (*begin == 'a' || *begin == 'A')
-            return true;
-        begin++;
-    }
-
-    return false;
-}
-
-WordBeforeFirstWordWithAReturnCode getWordBeforeFirstWordWithA(
-        char *s, wordDescriptor *wordBefore) {
-    wordDescriptor word1;
-    char *begin = s;
-
-    if (!getWord(begin, &word1))
-        return EMPTY_STRING;
-
-    if (isLetterA(word1))
-        return FIRST_WORD_WITH_A;
-
-    wordDescriptor word2;
-    begin = word1.end;
-
-    while (getWord(begin, &word2)) {
-        if (isLetterA(word2)) {
-            wordBefore->begin = word1.begin;
-            wordBefore->end = word1.end;
-            return WORD_FOUND;
+        if(isW1Found) {
+            s3 = copy(word1.begin, word1.end, s3);
+            *s3 = ' ';
+            s3++;
+            beginSearch1 = word1.end;
         }
-        word1.begin = word2.begin;
-        word1.end = word2.end;
-        begin = word2.end;
-    }
 
-    return NOT_FOUND_A_WORD_WITH_A;
-}
-
-void printWordBeforeFirstWordWithA(char *s) {
-    char *begin = s;
-    wordDescriptor word;
-    WordBeforeFirstWordWithAReturnCode code = getWordBeforeFirstWordWithA(begin, &word);
-    if(code == WORD_FOUND) {
-        char *end = copy(word.begin, word.end, _stringBuffer);
-        *end = '\0';
-        printf("%s", _stringBuffer);
-    }
-}
-
-bool isOnlyUniqueWords(char *s) {
-    getBagOfWords(&_bag, s);
-
-    wordDescriptor *curWord = _bag.words;
-    wordDescriptor *endWord = _bag.words + _bag.size - 1;
-
-    while (curWord < endWord) {
-        wordDescriptor *word = curWord + 1;
-        while (word <= endWord) {
-            if (areWordsEqual(*curWord, *word))
-                return false;
-            word++;
+        if(isW2Found) {
+            s3 = copy(word2.begin, word2.end, s3);
+            *s3 = ' ';
+            s3++;
+            beginSearch2 = word2.end;
         }
-        curWord++;
     }
 
-    return true;
+    *(s3 - 1) = '\0';
 }
+
+    void reverseTheOrderOfWords(char *s) {
+        if (*s == '\0')
+            return;
+
+        BagOfWords ws;
+        getBagOfWords(&ws, s);
+        char *buf = _stringBuffer;
+
+        for (int i = ws.size - 1; i >= 0; i--) {
+            buf = copy(ws.words[i].begin, ws.words[i].end, buf);
+            *buf = ' ';
+            buf++;
+        }
+        *buf = '\0';
+        s = copy(_stringBuffer, buf, s);
+        *(s - 1) = '\0';
+    }
+
+    bool isLetterA(wordDescriptor w) {
+        char *begin = w.begin;
+
+        while (begin != w.end) {
+            if (*begin == 'a' || *begin == 'A')
+                return true;
+            begin++;
+        }
+
+        return false;
+    }
+
+    WordBeforeFirstWordWithAReturnCode getWordBeforeFirstWordWithA(
+            char *s, wordDescriptor *wordBefore) {
+        wordDescriptor word1;
+        char *begin = s;
+
+        if (!getWord(begin, &word1))
+            return EMPTY_STRING;
+
+        if (isLetterA(word1))
+            return FIRST_WORD_WITH_A;
+
+        wordDescriptor word2;
+        begin = word1.end;
+
+        while (getWord(begin, &word2)) {
+            if (isLetterA(word2)) {
+                wordBefore->begin = word1.begin;
+                wordBefore->end = word1.end;
+                return WORD_FOUND;
+            }
+            word1.begin = word2.begin;
+            word1.end = word2.end;
+            begin = word2.end;
+        }
+
+        return NOT_FOUND_A_WORD_WITH_A;
+    }
+
+    void printWordBeforeFirstWordWithA(char *s) {
+        char *begin = s;
+        wordDescriptor word;
+        WordBeforeFirstWordWithAReturnCode code = getWordBeforeFirstWordWithA(begin, &word);
+        if (code == WORD_FOUND) {
+            char *end = copy(word.begin, word.end, _stringBuffer);
+            *end = '\0';
+            printf("%s", _stringBuffer);
+        }
+    }
+
+    bool isOnlyUniqueWords(char *s) {
+        getBagOfWords(&_bag, s);
+
+        wordDescriptor *curWord = _bag.words;
+        wordDescriptor *endWord = _bag.words + _bag.size - 1;
+
+        while (curWord < endWord) {
+            wordDescriptor *word = curWord + 1;
+            while (word <= endWord) {
+                if (areWordsEqual(*curWord, *word))
+                    return false;
+                word++;
+            }
+            curWord++;
+        }
+
+        return true;
+    }

@@ -53,6 +53,14 @@ void test_getCountOfPalindromes2() {
     assert(res == 2);
 }
 
+void test_mixTwoStrings() {
+    char s1[] = "man has his price";
+    char s2[] = "it is the tip of the iceberg";
+    char s3[MAX_STRING_SIZE];
+    mixTwoStrings(s1, s2, s3);
+    ASSERT_STRING("man it has is his the price tip of the iceberg", s3);
+}
+
 void test_replace() {
     char source[MAX_STRING_SIZE] = "love smile smile smile";
     char w1[] = "smile";
@@ -122,4 +130,5 @@ void tests() {
     test_reverseTheOrderOfWords2();
     test_isOnlyUniqueWords();
     //test_printWordBeforeFirstWordWithA();
+    test_mixTwoStrings();
 }

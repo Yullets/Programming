@@ -35,6 +35,8 @@ void printWordsAndReverse(char *s);
 
 void reverseTheOrderOfWords(char *s);
 
+void mixTwoStrings(char *s1, char *s2, char *s3);
+
 bool isLetterA(wordDescriptor w);
 
 WordBeforeFirstWordWithAReturnCode getWordBeforeFirstWordWithA(
