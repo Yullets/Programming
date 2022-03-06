@@ -35,6 +35,13 @@ void printWordsAndReverse(char *s);
 
 void reverseTheOrderOfWords(char *s);
 
+bool isLetterA(wordDescriptor w);
+
+WordBeforeFirstWordWithAReturnCode getWordBeforeFirstWordWithA(
+        char *s, wordDescriptor *wordBefore);
+
+void printWordBeforeFirstWordWithA(char *s);
+
 bool isOnlyUniqueWords(char *s);
 
 #endif //COURSE_STRINGTASKS_H

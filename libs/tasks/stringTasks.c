@@ -271,6 +271,57 @@ void reverseTheOrderOfWords(char *s) {
     *(s - 1) = '\0';
 }
 
+bool isLetterA(wordDescriptor w) {
+    char *begin = w.begin;
+
+    while (begin != w.end) {
+        if (*begin == 'a' || *begin == 'A')
+            return true;
+        begin++;
+    }
+
+    return false;
+}
+
+WordBeforeFirstWordWithAReturnCode getWordBeforeFirstWordWithA(
+        char *s, wordDescriptor *wordBefore) {
+    wordDescriptor word1;
+    char *begin = s;
+
+    if (!getWord(begin, &word1))
+        return EMPTY_STRING;
+
+    if (isLetterA(word1))
+        return FIRST_WORD_WITH_A;
+
+    wordDescriptor word2;
+    begin = word1.end;
+
+    while (getWord(begin, &word2)) {
+        if (isLetterA(word2)) {
+            wordBefore->begin = word1.begin;
+            wordBefore->end = word1.end;
+            return WORD_FOUND;
+        }
+        word1.begin = word2.begin;
+        word1.end = word2.end;
+        begin = word2.end;
+    }
+
+    return NOT_FOUND_A_WORD_WITH_A;
+}
+
+void printWordBeforeFirstWordWithA(char *s) {
+    char *begin = s;
+    wordDescriptor word;
+    WordBeforeFirstWordWithAReturnCode code = getWordBeforeFirstWordWithA(begin, &word);
+    if(code == WORD_FOUND) {
+        char *end = copy(word.begin, word.end, _stringBuffer);
+        *end = '\0';
+        printf("%s", _stringBuffer);
+    }
+}
+
 bool isOnlyUniqueWords(char *s) {
     getBagOfWords(&_bag, s);
 

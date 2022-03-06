@@ -94,6 +94,11 @@ void test_reverseTheOrderOfWords2() {
     ASSERT_STRING("", s);
 }
 
+void test_printWordBeforeFirstWordWithA() {
+    char s[] = "be smart";
+    printWordBeforeFirstWordWithA(s);
+}
+
 void test_isOnlyUniqueWords() {
     char s[] = "keep your friends close and your enemies closer";
     int res = isOnlyUniqueWords(s);
@@ -116,4 +121,5 @@ void tests() {
     test_reverseTheOrderOfWords1();
     test_reverseTheOrderOfWords2();
     test_isOnlyUniqueWords();
+    //test_printWordBeforeFirstWordWithA();
 }
