@@ -132,6 +132,14 @@ void test_isOnlyUniqueWords() {
     printf("\n");
 }
 
+void test_thereIsWordsWithEqualSymbols() {
+    char s[] = "defect tefedc";
+    int res = thereIsWordsWithEqualSymbols(s);
+    assert(res == true);
+    printf("test_thereIsWordsWithEqualSymbols - OK");
+    printf("\n");
+}
+
 void tests() {
     test_removeNonLetters();
     test_digitToEndReverse();
@@ -149,4 +157,5 @@ void tests() {
     //test_printWordBeforeFirstWordWithA();
     test_mixTwoStrings();
     test_getLastWordOfString1AlsoHasInString2();
+    test_thereIsWordsWithEqualSymbols();
 }

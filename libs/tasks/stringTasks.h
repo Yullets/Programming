@@ -48,5 +48,9 @@ bool getLastWordOfString1AlsoHasInString2(char *s1, char *s2, wordDescriptor *wo
 
 bool isOnlyUniqueWords(char *s);
 
+void sortSymbolsOfWord(wordDescriptor word);
+
+bool thereIsWordsWithEqualSymbols(char *s);
+
 #endif //COURSE_STRINGTASKS_H
 

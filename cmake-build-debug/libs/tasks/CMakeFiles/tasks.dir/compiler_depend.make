@@ -10,6 +10,15 @@ libs/tasks/CMakeFiles/tasks.dir/stringTasks.c.obj: ../libs/tasks/stringTasks.c \
   D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/_mingw_secapi.h \
   D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
   D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
+  D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/stdlib.h \
+  D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
+  D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h \
+  D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h \
+  D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/limits.h \
+  D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
+  D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/malloc.h \
+  D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/mm_malloc.h \
+  D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/errno.h \
   ../libs/string/string_.h \
   D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdint.h \
   D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/stdint.h \
@@ -23,7 +32,8 @@ libs/tasks/CMakeFiles/tasks.dir/stringTasks.c.obj: ../libs/tasks/stringTasks.c \
   D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
   D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
   D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdbool.h \
-  ../libs/tasks/stringTasks.h
+  ../libs/tasks/stringTasks.h \
+  ../libs/algorithms/array/array.h
 
 libs/tasks/CMakeFiles/tasks.dir/stringTests.c.obj: ../libs/tasks/stringTests.c \
   ../libs/string/string_.h \
@@ -140,6 +150,24 @@ D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/_mingw
 
 D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h:
 
+D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/limits.h:
+
+D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/stdlib.h:
+
+D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/corecrt_wstdlib.h:
+
+D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h:
+
+D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdlib_s.h:
+
+D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/malloc.h:
+
+D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/mm_malloc.h:
+
+D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/math.h:
+
+D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/errno.h:
+
 ../libs/string/string_.h:
 
 D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdint.h:
@@ -168,37 +196,19 @@ D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0
 
 ../libs/tasks/stringTasks.h:
 
+../libs/algorithms/array/array.h:
+
 ../libs/tasks/stringTests.c:
 
 ../libs/tasks/stringTests.h:
 
 ../libs/tasks/tasks.c:
 
-D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/malloc.h:
-
-D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/mm_malloc.h:
-
-D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/limits.h:
-
-D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/stdlib.h:
-
-D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/corecrt_wstdlib.h:
-
-D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h:
-
-D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdlib_s.h:
-
-D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/math.h:
-
-D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/errno.h:
-
 ../libs/algorithms/algorithm.h:
 
 ../libs/data_structures/matrix/matrix.h:
 
 ../libs/tasks/tasks.h:
-
-../libs/algorithms/array/array.h:
 
 ../libs/tasks/tests.c:
 

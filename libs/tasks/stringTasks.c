@@ -3,9 +3,11 @@
 //
 
 #include <ctype.h>
+#include <stdlib.h>
 
 #include "../string/string_.h"
 #include "stringTasks.h"
+#include "../algorithms/array/array.h"
 
 void removeNonLetters(char *s) {
     char *endSource = s + strlen_(s);;
@@ -386,4 +388,29 @@ bool isOnlyUniqueWords(char *s) {
     }
 
     return true;
+}
+
+void sortSymbolsOfWord(wordDescriptor word) {
+    int countOfElements = word.end - word.begin;
+    qsort(word.begin, countOfElements, sizeof(int), compare_ints);
+}
+
+bool thereIsWordsWithEqualSymbols(char *s) {
+    char *bufEnd = copy(s, getEndOfString(s), _stringBuffer);
+    *bufEnd = '\0';
+
+    getBagOfWords(&_bag, _stringBuffer);
+    wordDescriptor *_bagEnd = _bag.words + _bag.size;
+    for (wordDescriptor *curWord = _bag.words; curWord < _bagEnd; curWord++) {
+        sortSymbolsOfWord(*curWord);
+    }
+
+    for (wordDescriptor *curWord = _bag.words; curWord < _bagEnd; curWord++) {
+        for (wordDescriptor *nextWord = _bag.words; nextWord < _bagEnd; nextWord++) {
+            if (areWordsEqual(*curWord, *nextWord))
+                return true;
+        }
+    }
+
+    return false;
 }
