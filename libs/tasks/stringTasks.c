@@ -414,3 +414,25 @@ bool thereIsWordsWithEqualSymbols(char *s) {
 
     return false;
 }
+
+void copyWordsOtherThanLast(char *s) {
+    char *read = s;
+    char *write = s;
+    wordDescriptor lastWord, curWord;
+
+    if (!getWordReverse(getEndOfString(s) - 1, s - 1, &lastWord))
+        return;
+
+    while (getWord(read, &curWord)) {
+        if (!areWordsEqual(curWord, lastWord)) {
+            write = copy(curWord.begin, curWord.end, write);
+            *write = ' ';
+            write++;
+        }
+        read = curWord.end;
+    }
+    write -= s != write;
+    *write = '\0';
+}
+
+

@@ -45,6 +45,14 @@ void test_printWordBeforeFirstWordWithA();
 
 void test_isOnlyUniqueWords();
 
+void test_mixTwoStrings();
+
+void test_getLastWordOfString1AlsoHasInString2();
+
+void test_thereIsWordsWithEqualSymbols();
+
+void test_copyWordsOtherThanLast();
+
 void tests();
 
 #endif //COURSE_STRINGTESTS_H

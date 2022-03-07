@@ -52,5 +52,7 @@ void sortSymbolsOfWord(wordDescriptor word);
 
 bool thereIsWordsWithEqualSymbols(char *s);
 
+void copyWordsOtherThanLast(char *s);
+
 #endif //COURSE_STRINGTASKS_H
 

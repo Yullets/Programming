@@ -140,6 +140,12 @@ void test_thereIsWordsWithEqualSymbols() {
     printf("\n");
 }
 
+void test_copyWordsOtherThanLast() {
+    char s[] = "hope the best and prepare for the worst";
+    copyWordsOtherThanLast(s);
+    ASSERT_STRING("hope the best and prepare for the", s);
+}
+
 void tests() {
     test_removeNonLetters();
     test_digitToEndReverse();
@@ -158,4 +164,5 @@ void tests() {
     test_mixTwoStrings();
     test_getLastWordOfString1AlsoHasInString2();
     test_thereIsWordsWithEqualSymbols();
+    test_copyWordsOtherThanLast();
 }
