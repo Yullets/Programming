@@ -492,3 +492,20 @@ void addWordsFromBiggerString(char *s1, char *s2) {
     dst--;
     *dst = '\0';
 }
+
+bool areAllLettersIncluded(char *s, wordDescriptor word) {
+    bool stringSymbols[UCHAR_MAX + 1] = {false};
+    while (*s != '\0') {
+        stringSymbols[*s] = true;
+        s++;
+    }
+
+    char *wordBegin = word.begin;
+    while (wordBegin < word.end) {
+        if (stringSymbols[*wordBegin] == false)
+            return false;
+        wordBegin++;
+    }
+
+    return true;
+}

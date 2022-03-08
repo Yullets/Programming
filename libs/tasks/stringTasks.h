@@ -12,6 +12,8 @@ void removeNonLetters(char *s);
 
 void removeExtraSpaces(char *s);
 
+bool getWord(char *beginSearch, wordDescriptor *word);
+
 void digitToEnd(wordDescriptor word);
 
 void digitToEndReverse(char *stringStart);
@@ -57,6 +59,8 @@ void copyWordsOtherThanLast(char *s);
 void deletePalindromes(char *s);
 
 void addWordsFromBiggerString(char *s1, char *s2);
+
+bool areAllLettersIncluded(char *s, wordDescriptor word);
 
 #endif //COURSE_STRINGTASKS_H
 

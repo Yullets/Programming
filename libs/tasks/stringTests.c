@@ -90,6 +90,18 @@ void test_printWordsAndReverse() {
     printWordsAndReverse(s);
 }
 
+void test_reverseTheOrderOfWords1() {
+    char s[] = "better late than never";
+    reverseTheOrderOfWords(s);
+    ASSERT_STRING("never than late better", s);
+}
+
+void test_reverseTheOrderOfWords2() {
+    char s[] = "";
+    reverseTheOrderOfWords(s);
+    ASSERT_STRING("", s);
+}
+
 void test_printWordBeforeFirstWordWithA() {
     char s[] = "be smart";
     printWordBeforeFirstWordWithA(s);
@@ -146,6 +158,15 @@ void test_addWordsFromBiggerString() {
     ASSERT_STRING("can the best one", s2);
 }
 
+void test_areAllLettersIncluded() {
+    char s[] = "enjoy every moment";
+    char word[] = "journey";
+    wordDescriptor wd;
+    getWord(word, &wd);
+    bool res = areAllLettersIncluded(s, wd);
+    assert(res == false);
+}
+
 void tests() {
     test_removeNonLetters();
     test_digitToEndReverse();
@@ -167,4 +188,5 @@ void tests() {
     test_copyWordsOtherThanLast();
     test_deletePalindromes();
     test_addWordsFromBiggerString();
+    test_areAllLettersIncluded();
 }
