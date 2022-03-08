@@ -54,5 +54,7 @@ bool thereIsWordsWithEqualSymbols(char *s);
 
 void copyWordsOtherThanLast(char *s);
 
+void deletePalindromes(char *s);
+
 #endif //COURSE_STRINGTASKS_H
 

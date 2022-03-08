@@ -435,4 +435,20 @@ void copyWordsOtherThanLast(char *s) {
     *write = '\0';
 }
 
+void deletePalindromes(char *s) {
+    char *write = s;
+    char *read = s;
+
+    wordDescriptor word;
+    while (getWord(read, &word)) {
+        if (!isPalindrome(word)) {
+            write = copy(word.begin, word.end, write);
+            *write = ' ';
+            write++;
+        }
+        read = word.end;
+    }
+    write -= s != write;
+    *write = '\0';
+}
 

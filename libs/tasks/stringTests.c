@@ -146,6 +146,12 @@ void test_copyWordsOtherThanLast() {
     ASSERT_STRING("hope the best and prepare for the", s);
 }
 
+void test_deletePalindromes() {
+    char s[] = "there is no such thing abba as a free lunch";
+    deletePalindromes(s);
+    ASSERT_STRING("there is no such thing as free lunch", s);
+}
+
 void tests() {
     test_removeNonLetters();
     test_digitToEndReverse();
@@ -165,4 +171,5 @@ void tests() {
     test_getLastWordOfString1AlsoHasInString2();
     test_thereIsWordsWithEqualSymbols();
     test_copyWordsOtherThanLast();
+    test_deletePalindromes();
 }
