@@ -56,5 +56,7 @@ void copyWordsOtherThanLast(char *s);
 
 void deletePalindromes(char *s);
 
+void addWordsFromBiggerString(char *s1, char *s2);
+
 #endif //COURSE_STRINGTASKS_H
 

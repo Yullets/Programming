@@ -4,7 +4,6 @@
 #include "../string/string_.h"
 #include "stringTasks.h"
 #include "stringTests.h"
-#include "../string/string_.h"
 
 void assertString(const char *expected, char *got,
                   char const *fileName, char const *funcName,
@@ -12,7 +11,7 @@ void assertString(const char *expected, char *got,
     if (strcmp(expected, got)) {
         fprintf(stderr, " File %s\n", fileName);
         fprintf(stderr, "%s - failed on line %d\n", funcName, line);
-        fprintf(stderr, " Expected : \"%s \"\n", expected);
+        fprintf(stderr, "Expected : \"%s\"\n", expected);
         fprintf(stderr, "Got: \"%s\"\n\n", got);
     } else
         fprintf(stderr, "%s - OK\n", funcName);
@@ -91,18 +90,6 @@ void test_printWordsAndReverse() {
     printWordsAndReverse(s);
 }
 
-void test_reverseTheOrderOfWords1() {
-    char s[] = "better late than never";
-    reverseTheOrderOfWords(s);
-    ASSERT_STRING("never than late better", s);
-}
-
-void test_reverseTheOrderOfWords2() {
-    char s[] = "";
-    reverseTheOrderOfWords(s);
-    ASSERT_STRING("", s);
-}
-
 void test_printWordBeforeFirstWordWithA() {
     char s[] = "be smart";
     printWordBeforeFirstWordWithA(s);
@@ -152,6 +139,13 @@ void test_deletePalindromes() {
     ASSERT_STRING("there is no such thing as free lunch", s);
 }
 
+void test_addWordsFromBiggerString() {
+    char s1[] = "is the best one";
+    char s2[] = "can";
+    addWordsFromBiggerString(s1, s2);
+    ASSERT_STRING("can the best one", s2);
+}
+
 void tests() {
     test_removeNonLetters();
     test_digitToEndReverse();
@@ -172,4 +166,5 @@ void tests() {
     test_thereIsWordsWithEqualSymbols();
     test_copyWordsOtherThanLast();
     test_deletePalindromes();
+    test_addWordsFromBiggerString();
 }

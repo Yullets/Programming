@@ -6,11 +6,11 @@
 #include <stdlib.h>
 
 #include "../string/string_.h"
-#include "stringTasks.h"
 #include "../algorithms/array/array.h"
+#include "stringTasks.h"
 
 void removeNonLetters(char *s) {
-    char *endSource = s + strlen_(s);;
+    char *endSource = s + strlen_(s);
     char *destination = copyIf(s, endSource, s, isgraph);
     *destination = '\0';
 }
@@ -452,3 +452,43 @@ void deletePalindromes(char *s) {
     *write = '\0';
 }
 
+void addWordsFromBiggerString(char *s1, char *s2) {
+    getBagOfWords(&_bag, s1);
+    getBagOfWords(&_bag2, s2);
+
+    int size1 = _bag.size;
+    int size2 = _bag2.size;
+
+    int difference = abs(size2 - size1);
+
+    if (difference == 0)
+        return;
+
+    BagOfWords *sourceBag;
+    BagOfWords *dstBag;
+    char *dst;
+
+    if (size1 < size2) {
+        sourceBag = &_bag2;
+        dstBag = &_bag;
+        dst = getEndOfString(s1);
+    } else {
+        sourceBag = &_bag;
+        dstBag = &_bag2;
+        dst = getEndOfString(s2);
+    }
+
+    if (dstBag->size != 0) {
+        *dst = ' ';
+        dst++;
+    }
+
+    for (int i = sourceBag->size - difference; i < sourceBag->size; i++) {
+        dst = copy(sourceBag->words[i].begin, sourceBag->words[i].end, dst);
+        *dst = ' ';
+        dst++;
+    }
+
+    dst--;
+    *dst = '\0';
+}

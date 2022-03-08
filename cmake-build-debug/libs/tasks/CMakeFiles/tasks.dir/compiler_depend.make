@@ -32,8 +32,8 @@ libs/tasks/CMakeFiles/tasks.dir/stringTasks.c.obj: ../libs/tasks/stringTasks.c \
   D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
   D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
   D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdbool.h \
-  ../libs/tasks/stringTasks.h \
-  ../libs/algorithms/array/array.h
+  ../libs/algorithms/array/array.h \
+  ../libs/tasks/stringTasks.h
 
 libs/tasks/CMakeFiles/tasks.dir/stringTests.c.obj: ../libs/tasks/stringTests.c \
   ../libs/string/string_.h \
@@ -194,9 +194,9 @@ D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/swprin
 
 D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdbool.h:
 
-../libs/tasks/stringTasks.h:
-
 ../libs/algorithms/array/array.h:
+
+../libs/tasks/stringTasks.h:
 
 ../libs/tasks/stringTests.c:
 

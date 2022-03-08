@@ -30,5 +30,5 @@ libs/tasks/CMakeFiles/tasks.dir/stringTasks.c.obj: \
  D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/swprintf.inl \
  D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
  D:/Studing\ programs/CLion\ 2021.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdbool.h \
- C:\Users\Yulia\CLionProjects\Programming\libs\tasks\stringTasks.h \
- C:/Users/Yulia/CLionProjects/Programming/libs/algorithms/array/array.h
+ C:/Users/Yulia/CLionProjects/Programming/libs/algorithms/array/array.h \
+ C:\Users\Yulia\CLionProjects\Programming\libs\tasks\stringTasks.h
